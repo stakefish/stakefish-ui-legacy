@@ -33,13 +33,13 @@ jobs:
       - name: Build
         env:
           NODE_ENV: production
-        run: npm run build
+        run: npm run build-storybook
 
       - name: Deploy
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: public
+          build_dir: storybook-static
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
