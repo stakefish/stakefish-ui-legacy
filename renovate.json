@@ -1,0 +1,33 @@
+{
+  "automerge": false,
+  "branchName": "renovate/all",
+  "commitMessage": "🤖 Dependency update",
+  "schedule": ["before 5am on monday"],
+  "reviewers": ["balajmarius", "apple-juice", "vince19972"],
+  "dryRun": false,
+  "enabled": true,
+  "pinDigests": false,
+  "prCreation": "immediate",
+  "rangeStrategy": "pin",
+  "rebaseConflictedPrs": false,
+  "rebaseStalePrs": false,
+  "semanticCommits": false,
+  "semanticCommitScope": null,
+  "separateMajorMinor": false,
+  "separateMinorPatch": false,
+  "separateMultipleMajor": false,
+  "trustLevel": "high",
+  "updateLockFiles": true,
+  "updateNotScheduled": false,
+  "vulnerabilityAlerts": {
+    "enabled": true
+  },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 5am on monday"]
+  },
+  "node": {
+    "pinVersions": true,
+    "supportPolicy": ["lts_latest"]
+  }
+}
