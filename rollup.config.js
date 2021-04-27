@@ -1,5 +1,6 @@
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
+import copy from "rollup-plugin-copy";
 import generatePackage from "rollup-plugin-generate-package-json";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import typescript from "rollup-plugin-typescript2";
@@ -21,8 +22,16 @@ const config = {
         name: pkg.name,
         author: pkg.author,
         version: pkg.version,
+        license: pkg.license,
+        keywords: pkg.keywords,
         dependencies: pkg.dependencies,
       }),
+    }),
+    copy({
+      targets: [
+        { src: "README.md", dest: "lib/" },
+        { src: "LICENSE.md", dest: "lib/" },
+      ],
     }),
   ],
 };

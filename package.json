@@ -2,6 +2,12 @@
   "name": "@stakefish/ui",
   "version": "0.1.4",
   "author": "stakefish <hi@stake.fish>",
+  "license": "Apache-2.0",
+  "keywords": [
+    "react",
+    "react-components",
+    "design-system"
+  ],
   "scripts": {
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "format": "prettier --config .prettierrc 'src/**/*.{ts,tsx}'",
@@ -35,6 +41,7 @@
     "pre-push": "^0.1.1",
     "prettier": "^2.2.1",
     "rollup": "^2.45.2",
+    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-generate-package-json": "^3.2.0",
     "rollup-plugin-multi-input": "^1.2.0",
