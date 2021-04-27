@@ -33,6 +33,12 @@ jobs:
           NODE_ENV: production
         run: npm run build-storybook
 
+      - name: Publish
+        run: npm publish
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Deploy
         if: success() && startsWith(github.ref, 'refs/tags/')
         uses: crazy-max/ghaction-github-pages@v2
@@ -41,7 +47,3 @@ jobs:
           build_dir: storybook-static
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
