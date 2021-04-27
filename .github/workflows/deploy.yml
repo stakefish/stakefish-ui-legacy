@@ -40,7 +40,7 @@ jobs:
           target_branch: gh-pages
           build_dir: storybook-static
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
       - run: npm publish
         env:
