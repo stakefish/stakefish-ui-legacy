@@ -11,8 +11,6 @@ jobs:
 
       - name: Cache
         uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
         with:
           path: ~/.npm
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
@@ -20,6 +18,8 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+        env:
+          cache-name: cache-node-modules
 
       - name: Install
         run: npm install
@@ -32,19 +32,21 @@ jobs:
 
       - name: Build
         if: startsWith(github.ref, 'refs/tags/')
+        run: npm run build-storybook
         env:
           NODE_ENV: production
-        run: npm run build-storybook
 
       - name: Pack
         if: startsWith(github.ref, 'refs/tags/')
         run: npm run pack
 
       - name: Publish
-        if: startsWith(github.ref, 'refs/tags/')
-        run: npm publish ./lib --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        # if: startsWith(github.ref, 'refs/tags/')
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          access: public
+          package: lib/package.json
+          token: ${{ secrets.NPM_TOKEN }}
 
       - name: Deploy
         if: success() && startsWith(github.ref, 'refs/tags/')
