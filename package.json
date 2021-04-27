@@ -1,27 +1,12 @@
 {
   "name": "stakefish-ui",
   "version": "0.0.1-alpha",
-  "private": true,
-  "author": "stakefish team",
+  "author": "stakefish <hi@stake.fish>",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "format": "prettier --config .prettierrc 'src/**/*.{ts,tsx}'",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
-  },
-  "pre-commit": {
-    "run": [
-      "lint"
-    ]
-  },
-  "pre-push": {
-    "run": [
-      "lint",
-      "format"
-    ]
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
@@ -73,6 +58,17 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "pre-commit": {
+    "run": [
+      "lint"
+    ]
+  },
+  "pre-push": {
+    "run": [
+      "lint",
+      "format"
     ]
   }
 }
