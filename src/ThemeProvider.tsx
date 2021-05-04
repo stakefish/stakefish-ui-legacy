@@ -5,8 +5,12 @@ import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import { CssBaseline } from "@material-ui/core";
 
 import colors from "./theme/colors";
+import fontFamily from "./theme/fontFamily";
+import fontWeight from "./theme/fontWeight";
 
 import MuiCssBaseline from "./overrides/MuiCssBaseline";
+import MuiTypography from "./overrides/MuiTypography";
+import fontSize from "./theme/fontSize";
 
 /**
  * Types
@@ -25,8 +29,18 @@ const palette = createPalette(colors);
  */
 const theme = createMuiTheme({
   palette,
+  typography: {
+    htmlFontSize: fontSize.s,
+    fontSize: fontSize.lg,
+    fontFamily: fontFamily.sans,
+    fontWeightLight: fontWeight.light,
+    fontWeightRegular: fontWeight.normal,
+    fontWeightMedium: fontWeight.medium,
+    fontWeightBold: fontWeight.bold,
+  },
   overrides: {
     MuiCssBaseline,
+    MuiTypography,
   },
 });
 

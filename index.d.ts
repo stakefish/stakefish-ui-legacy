@@ -3,30 +3,30 @@ import { Palette, PaletteOptions } from "@material-ui/core/styles/createPalette"
 declare module "@material-ui/core/styles/createPalette" {
   interface Colors {
     red: {
-      dark: "#F04646";
-      main: "#FF5959";
-      contrastText: "#FFFFFF";
+      dark: string;
+      main: string;
+      contrastText: string;
     };
     green: {
-      bright: "#82D318";
-      light: "#6BBD00";
-      dark: "#008E07";
-      main: "#0BA012";
-      contrastText: "#FFFFFF";
+      bright: string;
+      light: string;
+      dark: string;
+      main: string;
+      contrastText: string;
     };
     black: {
-      bright: "#7D8499";
-      light: "#697087";
-      dark: "#00030E";
-      main: "#313540";
-      contrastText: "#FFFFFF";
+      bright: string;
+      light: string;
+      dark: string;
+      main: string;
+      contrastText: string;
     };
     gray: {
-      bright: "#FAFBFC";
-      light: "#F5F5F7";
-      dark: "#BBBEC7";
-      main: "#E1E3E8";
-      contrastText: "#00030E";
+      bright: string;
+      light: string;
+      dark: string;
+      main: string;
+      contrastText: string;
     };
     getContrastText?: (background: string) => string;
   }

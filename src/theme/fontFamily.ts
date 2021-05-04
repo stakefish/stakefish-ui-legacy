@@ -1,6 +1,7 @@
 const fontFamily = {
-  primary: "'Montserrat', Helvetica, Arial, sans-serif",
-  secondary: "'Space Grotesk', Helvetica, Arial, sans-serif",
+  sans: "'Montserrat', Helvetica, Arial, sans-serif",
+  serif: "'Space Grotesk', Helvetica, Arial, sans-serif",
+  monospace: "'Source Code Pro', monospace",
 };
 
 export default fontFamily;
