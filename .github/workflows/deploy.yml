@@ -31,14 +31,17 @@ jobs:
         run: npm run format
 
       - name: Build
+        if: startsWith(github.ref, 'refs/tags/')
         run: npm run build-storybook
         env:
           NODE_ENV: production
 
       - name: Pack
+        if: startsWith(github.ref, 'refs/tags/')
         run: npm run pack
 
       - name: Publish
+        if: startsWith(github.ref, 'refs/tags/')
         uses: JS-DevTools/npm-publish@v1
         with:
           access: public
@@ -46,6 +49,7 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
 
       - name: Deploy
+        if: success() && startsWith(github.ref, 'refs/tags/')
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
