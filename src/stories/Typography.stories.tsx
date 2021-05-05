@@ -41,6 +41,19 @@ const argTypes = {
       defaultValue: { summary: "initial" },
     },
   },
+  align: {
+    name: "align",
+    description: "Set the text-align on the component.",
+    defaultValue: "inherit",
+    control: {
+      type: "select",
+      options: ["inherit", "left", "center", "right", "justify"],
+    },
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "inherit" },
+    },
+  },
 };
 
 const Template: Story<TypographyProps> = (args: TypographyProps) => {
