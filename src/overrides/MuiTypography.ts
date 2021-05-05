@@ -1,61 +1,97 @@
-import fontFamily from "../theme/fontFamily";
+import colors from "../theme/colors";
 import fontSize from "../theme/fontSize";
 import fontWeight from "../theme/fontWeight";
+import fontFamily from "../theme/fontFamily";
+import lineHeight from "../theme/lineHeight";
 
 const MuiTypography = {
   h1: {
-    fontSize: fontSize.xl5,
     fontWeight: fontWeight.bold,
     fontFamily: fontFamily.serif,
+    fontSize: fontSize.xl6,
+    lineHeight: lineHeight.xl3,
   },
   h2: {
-    fontSize: fontSize.xl4,
     fontWeight: fontWeight.bold,
     fontFamily: fontFamily.serif,
+    fontSize: fontSize.xl5,
+    lineHeight: lineHeight.xl2,
   },
   h3: {
-    fontSize: fontSize.xl3,
     fontWeight: fontWeight.bold,
     fontFamily: fontFamily.serif,
+    fontSize: fontSize.xl4,
+    lineHeight: lineHeight.xl,
   },
   h4: {
-    fontSize: fontSize.xl3,
     fontWeight: fontWeight.normal,
     fontFamily: fontFamily.serif,
+    fontSize: fontSize.xl4,
+    lineHeight: lineHeight.xl,
   },
   h5: {
-    fontSize: fontSize.lg,
     fontWeight: fontWeight.semi,
     fontFamily: fontFamily.serif,
+    fontSize: fontSize.xl,
+    lineHeight: lineHeight.lg,
   },
   h6: {
-    fontSize: fontSize.lg,
     fontWeight: fontWeight.normal,
     fontFamily: fontFamily.serif,
+    fontSize: fontSize.xl,
+    lineHeight: lineHeight.lg,
   },
   body1: {
-    fontSize: fontSize.l,
+    fontFamily: fontFamily.sans,
     fontWeight: fontWeight.normal,
+    fontSize: fontSize.xl,
+    lineHeight: lineHeight.lg,
   },
   body2: {
-    fontSize: fontSize.l,
+    fontFamily: fontFamily.sans,
     fontWeight: fontWeight.medium,
+    fontSize: fontSize.lg,
+    lineHeight: lineHeight.ml,
   },
   subtitle1: {
-    fontSize: fontSize.l,
+    fontFamily: fontFamily.sans,
     fontWeight: fontWeight.normal,
+    fontSize: fontSize.lg,
+    lineHeight: lineHeight.ml,
   },
   subtitle2: {
-    fontSize: fontSize.m,
+    fontFamily: fontFamily.sans,
     fontWeight: fontWeight.normal,
+    fontSize: fontSize.m,
+    lineHeight: lineHeight.m,
   },
   caption: {
-    fontSize: fontSize.m,
+    fontFamily: fontFamily.sans,
     fontWeight: fontWeight.medium,
+    fontSize: fontSize.m,
+    lineHeight: lineHeight.m,
   },
   overline: {
-    fontSize: fontSize.sm,
+    fontFamily: fontFamily.sans,
     fontWeight: fontWeight.normal,
+    fontSize: fontSize.sm,
+    lineHeight: lineHeight.sm,
+    textTransform: "none" as "none",
+  },
+  colorPrimary: {
+    color: colors.green.light,
+  },
+  colorTextPrimary: {
+    color: colors.green.contrastText,
+  },
+  colorSecondary: {
+    color: colors.black.bright,
+  },
+  colorTextSecondary: {
+    color: colors.gray.dark,
+  },
+  colorError: {
+    color: colors.red.main,
   },
 };
 

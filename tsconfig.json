@@ -23,8 +23,8 @@
     "declarationDir": "./lib",
   },
   "include": [
+    ".",
     "src",
     "stories", 
-    "index.d.ts"
   ]
 }
