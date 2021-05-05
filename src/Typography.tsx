@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   h2: {
     [theme.breakpoints.down("sm")]: {
       fontSize: theme.typography.fontSizeXl2,
-      lineHeight: theme.typography.LineHeightMl,
+      lineHeight: theme.typography.lineHeightMl,
     },
   },
   h3: {
