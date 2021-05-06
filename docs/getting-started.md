@@ -48,6 +48,23 @@ Yes, this really is all you need to get started.
 
 All the components that the library provides are documented using [Storybook](https://storybook.js.org/) and are available [here](https://stakefish.github.io/stakefish-ui).
 
+## Usage with Typescript
+
+The library is written in TypeScript with complete type definitions that are available in the same package as the components.
+
+The naming convention is `ComponentName` suffixed by `Props`. For example the type name of `Typography` will be named `TypographyProps`.
+
+```tsx
+// CustomTypography.tsx
+// ...
+import React from "react";
+import { Typography, TypographyProps } from "@stakefish/ui";
+
+const CustomTypography: React.FC<TypographyProps> = (customTypographyProps: TypographyProps) => {
+  return <Typography {...customTypographyprops} />;
+};
+```
+
 ## Component customization
 
 Customization of the components should be achieved ideally through props.
@@ -76,22 +93,5 @@ export const OverrideWithJSS = (props) => {
   const classes = useStyles();
 
   return <Typography {...props} className={classes.text} />;
-};
-```
-
-## Usage with Typescript
-
-The library is written in TypeScript with complete type definitions that are available in the same package as the components.
-
-The naming convention is `ComponentName` suffixed by `Props`. For example the type name of `Typography` will be named `TypographyProps`.
-
-```tsx
-// CustomTypography.tsx
-// ...
-import React from "react";
-import { Typography, TypographyProps } from "@stakefish/ui";
-
-const CustomTypography: React.FC<TypographyProps> = (customTypographyProps: TypographyProps) => {
-  return <Typography {...customTypographyprops} />;
 };
 ```
