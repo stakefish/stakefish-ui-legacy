@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://www.npmjs.com/package/@stakefish/ui"><img src="https://gateway.pinata.cloud/ipfs/QmWpU4vfTJmxBtf1CCtihe3QqJ9ZpNhrwgzCGLpG9sNBVk" /></a>
+  <a href="https://www.npmjs.com/package/@stakefish/ui"><img src="https://gateway.pinata.cloud/ipfs/QmWpU4vfTJmxBtf1CCtihe3QqJ9ZpNhrwgzCGLpG9sNBVk" width="300" /></a>
 </div>
 
 <div align="center">
