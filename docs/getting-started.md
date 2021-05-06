@@ -46,7 +46,7 @@ Yes, this really is all you need to get started.
 
 ## Components
 
-All components that the library provides are documented using [Storybook](https://stakefish.github.io/stakefish-ui).
+All components that the library provides are documented using [Storybook](https://storybook.js.org/) and are available [here](https://stakefish.github.io/stakefish-ui).
 
 ## Usage with Typescript
 
