@@ -29,7 +29,7 @@ This is a component that provides a theme to all React components underneath its
 > `<ThemeProvider />` should be _ALWAYS_ at the root of your React rendering tree.
 
 ```js
-// your-react-app-root.js
+// Root.js
 // ...
 import { ThemeProvider } from "@stakefish/ui";
 
@@ -54,6 +54,7 @@ The library can be used with Typescript and all the type definitions are availab
 The naming convention is `ComponentNameProps`.
 
 ```tsx
+// CustomTypography.tsx
 // ...
 import React from "react";
 import { Typography, TypographyProps } from "@stakefish/ui";
