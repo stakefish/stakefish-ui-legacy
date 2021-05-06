@@ -56,7 +56,7 @@ import { Typography } from "@stakefish/ui";
 const Component = () => {
   return (
     <>
-      <Typography variant="body1">🐠 rules! </Typography>
+      <Typography variant="body1">🐠 rules!</Typography>
     </>
   );
 };
