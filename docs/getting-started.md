@@ -26,7 +26,7 @@ $ yarn add @stakefish/ui
 Add `ThemeProvider` at the root of your React application.
 This is a component that provides a theme to all React components underneath itself via the context API.
 
-> `<ThemeProvider />` should be at the root of your React rendering tree.
+> `<ThemeProvider />` should be _ALWAYS_ at the root of your React rendering tree.
 
 ```js
 // your-react-app-root.js
@@ -42,4 +42,23 @@ const Root = () => {
 };
 ```
 
+Yes, this really is all you need to get started.
+
 ## Components
+
+All components that the library provides are documented using [Storybook](https://stakefish.github.io/stakefish-ui).
+
+## Usage with Typescript
+
+The library can be used with Typescript and all the type definitions are available in the same package.
+The naming convention is `ComponentNameProps`.
+
+```ts
+// ...
+import React from "react";
+import { Typography, TypographyProps } from "@stakefish/ui";
+
+const CustomTypography: React.FC<TypographyProps> = (customTypographyProps: TypographyProps) => {
+  // ...
+};
+```
