@@ -71,8 +71,6 @@ Customization of the components should be achieved ideally through props.
 
 If you find that is not the case, the library provides a `makeStyles` utility that can enhance the styles. You can use it, but you don't have to, since the library is also interoperable with all the other major styling solutions.
 
-> ⚠️ Use this with caution and only if absolutely necessary.
-
 ```js
 // Component.js
 // ...
@@ -95,3 +93,5 @@ export const OverrideWithJSS = (props) => {
   return <Typography {...props} className={classes.text} />;
 };
 ```
+
+> ⚠️ Use this with caution and only if absolutely necessary.
