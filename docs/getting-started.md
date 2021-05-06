@@ -48,17 +48,34 @@ Yes, this really is all you need to get started.
 
 All the components that the library provides are documented using [Storybook](https://storybook.js.org/) and are available [here](https://stakefish.github.io/stakefish-ui).
 
+## Component customization
+
+Customization of the components should be achieved ideally through props.
+
+If you find that is not the case, the library provides a `makeStyles` utility that can enhance the styles. You can use it, but you don't have to, since the library is also interoperable with all the other major styling solutions.
+
+> ⚠️ Use this with caution and only if absolutely necessary.
+
 ```js
 // Component.js
 // ...
-import { Typography } from "@stakefish/ui";
+import styled from "styled-components";
+import { Typography, makeStyles } from "@stakefish/ui";
 
-const Component = () => {
-  return (
-    <>
-      <Typography variant="body1">🐠 rules!</Typography>
-    </>
-  );
+export const OverrideWithStyledComponents = styled(Typography)`
+  color: pink;
+`;
+
+const useStyles = makeStyles((theme) => {
+  text: {
+    color: "pink";
+  }
+});
+
+export const OverrideWithJSS = (props) => {
+  const classes = useStyles();
+
+  return <Typography {...props} className={classes.text} />;
 };
 ```
 
