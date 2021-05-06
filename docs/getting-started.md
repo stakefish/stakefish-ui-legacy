@@ -50,8 +50,9 @@ All the components that the library provides are documented using [Storybook](ht
 
 ## Usage with Typescript
 
-The library can be used with Typescript and all the type definitions are available in the same package.
-The naming convention is `ComponentNameProps`.
+The library is written in TypeScript with complete type definitions that are available in the same package as the components.
+
+The naming convention is `ComponentName` suffixed by `Props`. For example the type name of `Typography` will be named `TypographyProps`.
 
 ```tsx
 // CustomTypography.tsx
