@@ -53,7 +53,7 @@ All components that the library provides are documented using [Storybook](https:
 The library can be used with Typescript and all the type definitions are available in the same package.
 The naming convention is `ComponentNameProps`.
 
-```ts
+```tsx
 // ...
 import React from "react";
 import { Typography, TypographyProps } from "@stakefish/ui";
