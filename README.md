@@ -16,7 +16,7 @@ stake.fish lightning design system for React.
 ## Documentation
 
 - [Contribution guidelines](/docs/contribution-guidelines.md)
-- [Component customization](/docs/component-customization.md)
+- [Getting started with `@stakefish/ui`](/docs/getting-started.md)
 
 ## License
 
