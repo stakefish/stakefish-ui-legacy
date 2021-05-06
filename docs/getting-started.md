@@ -29,7 +29,7 @@ This is a component that provides a theme to all React components underneath its
 > `<ThemeProvider />` should be _ALWAYS_ at the root of your React rendering tree.
 
 ```js
-// Root.js
+// YourAppRootFile.js
 // ...
 import { ThemeProvider } from "@stakefish/ui";
 
