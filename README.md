@@ -1,13 +1,13 @@
-# :wave: Welcome to stakefish UI
+# 👋 Welcome to stakefish UI
 
-## Installation
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/stakefish/stakefish-ui/build-and-deploy)
 
-```
-$ npm install
-```
+## Documentation
 
-## Using stakefish UI
+- [Development workflow](/docs/development.md)
+- [Component customization](/docs/component-customization.md)
 
-```
-$ npm run storybook
-```
+## Authors
+
+- [@apple-juice](https://www.github.com/apple-juice)
+- [@balajmarius](https://www.github.com/balajmarius)
