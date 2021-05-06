@@ -1,11 +1,21 @@
+<div class="center">
+  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" />
+</div>
+
+---
+
 # 👋 Welcome to stakefish UI
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/stakefish/stakefish-ui/build-and-deploy)
+stake.fish lightning design system for React.
 
 ## Documentation
 
-- [Development workflow](/docs/development.md)
+- [Contribution guidelines](/docs/contribution-guidelines.md)
 - [Component customization](/docs/component-customization.md)
+
+## License
+
+This project is licensed under the Apache 2.0 License.
 
 ## Authors
 
