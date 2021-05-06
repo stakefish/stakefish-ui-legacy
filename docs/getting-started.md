@@ -59,6 +59,6 @@ import React from "react";
 import { Typography, TypographyProps } from "@stakefish/ui";
 
 const CustomTypography: React.FC<TypographyProps> = (customTypographyProps: TypographyProps) => {
-  // ...
+  return <Typography {...customTypographyprops} />;
 };
 ```
