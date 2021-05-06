@@ -4,7 +4,7 @@
 
 <div align="center">
   <a href="#"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" /></a>
-  <a href="https://www.npmjs.com/package/@stakefish@ui"><img src="https://img.shields.io/npm/v/stakefish@ui.svg" /></a>
+  <a href="https://www.npmjs.com/package/@stakefish/ui"><img src="https://img.shields.io/npm/v/@stakefish/ui.svg" /></a>
 </div>
 
 ---
