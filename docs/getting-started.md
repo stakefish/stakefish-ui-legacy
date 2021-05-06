@@ -54,7 +54,7 @@ The library is written in TypeScript with complete type definitions that are ava
 
 The naming convention is `ComponentName` suffixed by `Props`. For example the type name of `Typography` will be named `TypographyProps`.
 
-```tsx
+```ts
 // CustomTypography.tsx
 // ...
 import React from "react";
