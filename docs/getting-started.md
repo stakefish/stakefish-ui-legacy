@@ -3,7 +3,7 @@
 This library is stakefish's open source design system, the library is at the core of our UI products.
 Each component works in isolation. They are self-supporting, and will only inject the styles they need to display.
 
-> A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications.
+> 💡 A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications.
 
 # Quick start
 
@@ -26,7 +26,7 @@ $ yarn add @stakefish/ui
 Add `ThemeProvider` at the root of your React application.
 This is a component that provides a theme to all React components underneath itself via the context API.
 
-> `<ThemeProvider />` should be _ALWAYS_ at the root of your React rendering tree.
+> ⚠️ `<ThemeProvider />` should be _ALWAYS_ at the root of your React rendering tree.
 
 ```js
 // YourAppRootFile.js
