@@ -48,6 +48,20 @@ Yes, this really is all you need to get started.
 
 All the components that the library provides are documented using [Storybook](https://storybook.js.org/) and are available [here](https://stakefish.github.io/stakefish-ui).
 
+```js
+// Component.js
+// ...
+import { Typography } from "@stakefish/ui";
+
+const Component = () => {
+  return (
+    <>
+      <Typography variant="body1">🐠 rules! </Typography>
+    </>
+  );
+};
+```
+
 ## Usage with Typescript
 
 The library is written in TypeScript with complete type definitions that are available in the same package as the components.
