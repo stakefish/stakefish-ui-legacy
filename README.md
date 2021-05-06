@@ -1,5 +1,6 @@
 <div class="center">
-  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" />
+  <a href="#"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" /></a>
+  <a href="https://www.npmjs.com/package/brave-ui"><img src="https://img.shields.io/npm/v/brave-ui.svg" /></a>
 </div>
 
 ---
