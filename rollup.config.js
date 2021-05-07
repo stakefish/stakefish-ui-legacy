@@ -8,10 +8,9 @@ import remove from "rollup-plugin-delete";
 import multi from "rollup-plugin-multi-input";
 
 const config = {
-  input: ["./src/*.tsx"],
+  input: ["./src/**/*.ts(x)?"],
   output: [{ dir: "lib", format: "esm", exports: "named" }],
   plugins: [
-    remove({ targets: ["lib/*"] }),
     multi(),
     peerDepsExternal(),
     resolve(),
@@ -32,6 +31,9 @@ const config = {
         { src: "README.md", dest: "lib/" },
         { src: "LICENSE.md", dest: "lib/" },
       ],
+    }),
+    remove({
+      targets: ["lib/*"],
     }),
   ],
 };
