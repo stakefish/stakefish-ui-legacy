@@ -30,15 +30,15 @@ jobs:
       - name: Format
         run: npm run format
 
-      - name: Build
+      - name: Build Storybook
         if: startsWith(github.ref, 'refs/tags/')
         run: npm run build-storybook
         env:
           NODE_ENV: production
 
-      - name: Pack
+      - name: Build Lib
         if: startsWith(github.ref, 'refs/tags/')
-        run: npm run pack
+        run: npm run build
 
       - name: Publish
         if: startsWith(github.ref, 'refs/tags/')
