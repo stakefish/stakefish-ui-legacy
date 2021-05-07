@@ -4,14 +4,14 @@ import createPalette from "@material-ui/core/styles/createPalette";
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import { CssBaseline } from "@material-ui/core";
 
-import colors from "./theme/colors";
-import lineHeight from "./theme/lineHeight";
-import fontSize from "./theme/fontSize";
-import fontFamily from "./theme/fontFamily";
-import fontWeight from "./theme/fontWeight";
+import colors from "../theme/colors";
+import lineHeight from "../theme/lineHeight";
+import fontSize from "../theme/fontSize";
+import fontFamily from "../theme/fontFamily";
+import fontWeight from "../theme/fontWeight";
 
-import MuiCssBaseline from "./overrides/MuiCssBaseline";
-import MuiTypography from "./overrides/MuiTypography";
+import MuiCssBaseline from "../overrides/MuiCssBaseline";
+import MuiTypography from "../overrides/MuiTypography";
 
 /**
  * Types

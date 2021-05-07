@@ -1,2 +1,4 @@
-export { default as ThemeProvider, ThemeProviderProps } from "./ThemeProvider";
-export { default as Typography, TypographyProps } from "./Typography";
+export { default as makeStyles } from "@material-ui/core/styles/createStyles";
+
+export { default as ThemeProvider, ThemeProviderProps } from "./core/ThemeProvider";
+export { default as Typography, TypographyProps } from "./components/Typography";
