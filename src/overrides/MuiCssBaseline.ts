@@ -9,12 +9,12 @@ const MuiCssBaseLine = {
         fontWeight: fontWeight.normal,
         fontFamily: fontFamily.sans,
         src: `
-          url('../fonts/montserrat-v15-latin-regular.eot'),
-          url('../fonts/montserrat-v15-latin-regular.eot?#iefix') format('embedded-opentype'), 
-          url('../fonts/montserrat-v15-latin-regular.woff2') format('woff2'), 
-          url('../fonts/montserrat-v15-latin-regular.woff') format('woff'), 
-          url('../fonts/montserrat-v15-latin-regular.ttf') format('truetype'), 
-          url('../fonts/montserrat-v15-latin-regular.svg#Montserrat') format('svg')
+          url('../assets/fonts/montserrat-v15-latin-regular.eot'),
+          url('../assets/fonts/montserrat-v15-latin-regular.eot?#iefix') format('embedded-opentype'), 
+          url('../assets/fonts/montserrat-v15-latin-regular.woff2') format('woff2'), 
+          url('../assets/fonts/montserrat-v15-latin-regular.woff') format('woff'), 
+          url('../assets/fonts/montserrat-v15-latin-regular.ttf') format('truetype'), 
+          url('../assets/fonts/montserrat-v15-latin-regular.svg#Montserrat') format('svg')
         `,
       },
       {
@@ -22,11 +22,11 @@ const MuiCssBaseLine = {
         fontWeight: fontWeight.normal,
         fontFamily: fontFamily.sans,
         src: `
-          url('../fonts/montserrat-v15-latin-italic.eot?#iefix') format('embedded-opentype'), 
-          url('../fonts/montserrat-v15-latin-italic.woff2') format('woff2'), 
-          url('../fonts/montserrat-v15-latin-italic.woff') format('woff'), 
-          url('../fonts/montserrat-v15-latin-italic.ttf') format('truetype'), 
-          url('../fonts/montserrat-v15-latin-italic.svg#Montserrat') format('svg')
+          url('../assets/fonts/montserrat-v15-latin-italic.eot?#iefix') format('embedded-opentype'), 
+          url('../assets/fonts/montserrat-v15-latin-italic.woff2') format('woff2'), 
+          url('../assets/fonts/montserrat-v15-latin-italic.woff') format('woff'), 
+          url('../assets/fonts/montserrat-v15-latin-italic.ttf') format('truetype'), 
+          url('../assets/fonts/montserrat-v15-latin-italic.svg#Montserrat') format('svg')
         `,
       },
       {
@@ -34,11 +34,11 @@ const MuiCssBaseLine = {
         fontWeight: fontWeight.medium,
         fontFamily: fontFamily.sans,
         src: `
-          url('../fonts/montserrat-v15-latin-500.eot?#iefix') format('embedded-opentype'), 
-          url('../fonts/montserrat-v15-latin-500.woff2') format('woff2'), 
-          url('../fonts/montserrat-v15-latin-500.woff') format('woff'), 
-          url('../fonts/montserrat-v15-latin-500.ttf') format('truetype'), 
-          url('../fonts/montserrat-v15-latin-500.svg#Montserrat') format('svg')
+          url('../assets/fonts/montserrat-v15-latin-500.eot?#iefix') format('embedded-opentype'), 
+          url('../assets/fonts/montserrat-v15-latin-500.woff2') format('woff2'), 
+          url('../assets/fonts/montserrat-v15-latin-500.woff') format('woff'), 
+          url('../assets/fonts/montserrat-v15-latin-500.ttf') format('truetype'), 
+          url('../assets/fonts/montserrat-v15-latin-500.svg#Montserrat') format('svg')
         `,
       },
       {
@@ -46,11 +46,11 @@ const MuiCssBaseLine = {
         fontWeight: fontWeight.medium,
         fontFamily: fontFamily.sans,
         src: `
-          url('../fonts/montserrat-v15-latin-500italic.eot?#iefix') format('embedded-opentype'), 
-          url('../fonts/montserrat-v15-latin-500italic.woff2') format('woff2'), 
-          url('../fonts/montserrat-v15-latin-500italic.woff') format('woff'), 
-          url('../fonts/montserrat-v15-latin-500italic.ttf') format('truetype'), 
-          url('../fonts/montserrat-v15-latin-500italic.svg#Montserrat') format('svg')
+          url('../assets/fonts/montserrat-v15-latin-500italic.eot?#iefix') format('embedded-opentype'), 
+          url('../assets/fonts/montserrat-v15-latin-500italic.woff2') format('woff2'), 
+          url('../assets/fonts/montserrat-v15-latin-500italic.woff') format('woff'), 
+          url('../assets/fonts/montserrat-v15-latin-500italic.ttf') format('truetype'), 
+          url('../assets/fonts/montserrat-v15-latin-500italic.svg#Montserrat') format('svg')
         `,
       },
       {
@@ -58,11 +58,11 @@ const MuiCssBaseLine = {
         fontWeight: fontWeight.normal,
         fontFamily: fontFamily.serif,
         src: `
-          url('../fonts/space-grotesk-v5-latin-regular.eot?#iefix') format('embedded-opentype'),
-          url('../fonts/space-grotesk-v5-latin-regular.woff2') format('woff2'),
-          url('../fonts/space-grotesk-v5-latin-regular.woff') format('woff'),
-          url('../fonts/space-grotesk-v5-latin-regular.ttf') format('truetype'),
-          url('../fonts/space-grotesk-v5-latin-regular.svg#SpaceGrotesk') format('svg')
+          url('../assets/fonts/space-grotesk-v5-latin-regular.eot?#iefix') format('embedded-opentype'),
+          url('../assets/fonts/space-grotesk-v5-latin-regular.woff2') format('woff2'),
+          url('../assets/fonts/space-grotesk-v5-latin-regular.woff') format('woff'),
+          url('../assets/fonts/space-grotesk-v5-latin-regular.ttf') format('truetype'),
+          url('../assets/fonts/space-grotesk-v5-latin-regular.svg#SpaceGrotesk') format('svg')
         `,
       },
       {
@@ -70,11 +70,11 @@ const MuiCssBaseLine = {
         fontWeight: fontWeight.medium,
         fontFamily: fontFamily.serif,
         src: `
-          url('../fonts/space-grotesk-v5-latin-500.eot?#iefix') format('embedded-opentype'),
-          url('../fonts/space-grotesk-v5-latin-500.woff2') format('woff2'),
-          url('../fonts/space-grotesk-v5-latin-500.woff') format('woff'),
-          url('../fonts/space-grotesk-v5-latin-500.ttf') format('truetype'),
-          url('../fonts/space-grotesk-v5-latin-500.svg#SpaceGrotesk') format('svg')
+          url('../assets/fonts/space-grotesk-v5-latin-500.eot?#iefix') format('embedded-opentype'),
+          url('../assets/fonts/space-grotesk-v5-latin-500.woff2') format('woff2'),
+          url('../assets/fonts/space-grotesk-v5-latin-500.woff') format('woff'),
+          url('../assets/fonts/space-grotesk-v5-latin-500.ttf') format('truetype'),
+          url('../assets/fonts/space-grotesk-v5-latin-500.svg#SpaceGrotesk') format('svg')
         `,
       },
       {
@@ -82,11 +82,11 @@ const MuiCssBaseLine = {
         fontWeight: fontWeight.semi,
         fontFamily: fontFamily.serif,
         src: `
-          url('../fonts/space-grotesk-v5-latin-600.eot?#iefix') format('embedded-opentype'),
-          url('../fonts/space-grotesk-v5-latin-600.woff2') format('woff2'),
-          url('../fonts/space-grotesk-v5-latin-600.woff') format('woff'),
-          url('../fonts/space-grotesk-v5-latin-600.ttf') format('truetype'),
-          url('../fonts/space-grotesk-v5-latin-600.svg#SpaceGrotesk') format('svg')
+          url('../assets/fonts/space-grotesk-v5-latin-600.eot?#iefix') format('embedded-opentype'),
+          url('../assets/fonts/space-grotesk-v5-latin-600.woff2') format('woff2'),
+          url('../assets/fonts/space-grotesk-v5-latin-600.woff') format('woff'),
+          url('../assets/fonts/space-grotesk-v5-latin-600.ttf') format('truetype'),
+          url('../assets/fonts/space-grotesk-v5-latin-600.svg#SpaceGrotesk') format('svg')
         `,
       },
       {
@@ -94,11 +94,11 @@ const MuiCssBaseLine = {
         fontWeight: fontWeight.bold,
         fontFamily: fontFamily.serif,
         src: `
-          url('../fonts/space-grotesk-v5-latin-700.eot?#iefix') format('embedded-opentype'),
-          url('../fonts/space-grotesk-v5-latin-700.woff2') format('woff2'),
-          url('../fonts/space-grotesk-v5-latin-700.woff') format('woff'),
-          url('../fonts/space-grotesk-v5-latin-700.ttf') format('truetype'),
-          url('../fonts/space-grotesk-v5-latin-700.svg#SpaceGrotesk') format('svg')
+          url('../assets/fonts/space-grotesk-v5-latin-700.eot?#iefix') format('embedded-opentype'),
+          url('../assets/fonts/space-grotesk-v5-latin-700.woff2') format('woff2'),
+          url('../assets/fonts/space-grotesk-v5-latin-700.woff') format('woff'),
+          url('../assets/fonts/space-grotesk-v5-latin-700.ttf') format('truetype'),
+          url('../assets/fonts/space-grotesk-v5-latin-700.svg#SpaceGrotesk') format('svg')
         `,
       },
       {
@@ -106,11 +106,11 @@ const MuiCssBaseLine = {
         fontWeight: fontWeight.normal,
         fontFamily: fontFamily.monospace,
         src: `
-          url('../fonts/source-code-pro-v14-latin-regular.eot?#iefix') format('embedded-opentype'),
-          url('../fonts/source-code-pro-v14-latin-regular.woff2') format('woff2'),
-          url('../fonts/source-code-pro-v14-latin-regular.woff') format('woff'),
-          url('../fonts/source-code-pro-v14-latin-regular.ttf') format('truetype'),
-          url('../fonts/source-code-pro-v14-latin-regular.svg#SourceCodePro') format('svg')
+          url('../assets/fonts/source-code-pro-v14-latin-regular.eot?#iefix') format('embedded-opentype'),
+          url('../assets/fonts/source-code-pro-v14-latin-regular.woff2') format('woff2'),
+          url('../assets/fonts/source-code-pro-v14-latin-regular.woff') format('woff'),
+          url('../assets/fonts/source-code-pro-v14-latin-regular.ttf') format('truetype'),
+          url('../assets/fonts/source-code-pro-v14-latin-regular.svg#SourceCodePro') format('svg')
         `,
       },
       {
@@ -118,11 +118,11 @@ const MuiCssBaseLine = {
         fontWeight: fontWeight.semi,
         fontFamily: fontFamily.monospace,
         src: `
-          url('../fonts/source-code-pro-v14-latin-600.eot?#iefix') format('embedded-opentype'),
-          url('../fonts/source-code-pro-v14-latin-600.woff2') format('woff2'),
-          url('../fonts/source-code-pro-v14-latin-600.woff') format('woff'),
-          url('../fonts/source-code-pro-v14-latin-600.ttf') format('truetype'),
-          url('../fonts/source-code-pro-v14-latin-600.svg#SourceCodePro') format('svg')
+          url('../assets/fonts/source-code-pro-v14-latin-600.eot?#iefix') format('embedded-opentype'),
+          url('../assets/fonts/source-code-pro-v14-latin-600.woff2') format('woff2'),
+          url('../assets/fonts/source-code-pro-v14-latin-600.woff') format('woff'),
+          url('../assets/fonts/source-code-pro-v14-latin-600.ttf') format('truetype'),
+          url('../assets/fonts/source-code-pro-v14-latin-600.svg#SourceCodePro') format('svg')
         `,
       },
     ],

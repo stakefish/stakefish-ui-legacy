@@ -54,6 +54,31 @@ const argTypes = {
       defaultValue: { summary: "inherit" },
     },
   },
+  display: {
+    name: "display",
+    description: "Set the display on the component.",
+    defaultValue: "initial",
+    control: {
+      type: "select",
+      options: ["initial", "block", "inline"],
+    },
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "initial" },
+    },
+  },
+  noWrap: {
+    name: "noWrap",
+    description: "Set the text-wrap on the component.",
+    defaultValue: false,
+    control: {
+      type: "boolean",
+    },
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: false },
+    },
+  },
 };
 
 const Template: Story<TypographyProps> = (args: TypographyProps) => {

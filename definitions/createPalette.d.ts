@@ -5,28 +5,24 @@ declare module "@material-ui/core/styles/createPalette" {
     red: {
       dark: string;
       main: string;
-      contrastText: string;
     };
     green: {
       bright: string;
       light: string;
       dark: string;
       main: string;
-      contrastText: string;
     };
     black: {
       bright: string;
       light: string;
       dark: string;
       main: string;
-      contrastText: string;
     };
     gray: {
       bright: string;
       light: string;
       dark: string;
       main: string;
-      contrastText: string;
     };
     getContrastText?: (background: string) => string;
   }

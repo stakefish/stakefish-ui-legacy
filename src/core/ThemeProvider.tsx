@@ -12,6 +12,8 @@ import fontWeight from "../theme/fontWeight";
 
 import MuiCssBaseline from "../overrides/MuiCssBaseline";
 import MuiTypography from "../overrides/MuiTypography";
+import MuiFormHelperText from "../overrides/MuiFormHelperText";
+import MuiInput from "../overrides/MuiInput";
 
 /**
  * Types
@@ -62,9 +64,16 @@ const theme = createMuiTheme({
     lineHeightXl2: lineHeight.xl2,
     lineHeightXl3: lineHeight.xl3,
   },
+  props: {
+    MuiInput: {
+      disableUnderline: true,
+    },
+  },
   overrides: {
     MuiCssBaseline,
+    MuiInput,
     MuiTypography,
+    MuiFormHelperText,
   },
 });
 

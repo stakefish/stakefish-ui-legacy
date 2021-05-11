@@ -1,7 +1,23 @@
-import { Meta } from "@storybook/addon-docs/blocks";
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
+
+import colors from "../theme/colors";
 
 <Meta title="Welcome 👋" />
 
-# Welcome to stakefish UI 🐠
+# 👋 Welcome to stakefish UI
 
-stakefish lightning design system for React
+stake.fish lightning design system for React.
+
+## Documentation
+
+- [Contribution guidelines](https://github.com/stakefish/stakefish-ui/blob/master/docs/contribution-guidelines.md)
+- [Getting started with `@stakefish/ui`](https://github.com/stakefish/stakefish-ui/blob/master/docs/getting-started.md)
+
+## Palette
+
+<ColorPalette>
+  <ColorItem title="Black" subtitle="theme.palette.black" colors={colors.black} />
+  <ColorItem title="Gray" subtitle="theme.palette.gray" colors={colors.gray} />
+  <ColorItem title="Green" subtitle="theme.palette.green" colors={colors.green} />
+  <ColorItem title="Red" subtitle="theme.palette.red" colors={colors.red} />
+</ColorPalette>
