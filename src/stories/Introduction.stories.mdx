@@ -1,5 +1,7 @@
 import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
 
+import colors from "../theme/colors";
+
 <Meta title="Welcome 👋" />
 
 # 👋 Welcome to stakefish UI
@@ -14,8 +16,8 @@ stake.fish lightning design system for React.
 ## Palette
 
 <ColorPalette>
-  <ColorItem title="Black" subtitle="theme.palette.black" colors={{ bright: "#7D8499", light: "#697087", main: "#313540", dark: "#00030E" }} />
-  <ColorItem title="Gray" subtitle="theme.palette.gray" colors={{ bright: "#FAFBFC", light: "#F5F5F7", main: "#E1E3E8", dark: "#BBBEC7" }} />
-  <ColorItem title="Green" subtitle="theme.palette.green" colors={{ bright: "#82D318", light: "#6BBD00", main: "#0BA012", dark: "#008E07" }} />
-  <ColorItem title="Red" subtitle="theme.palette.red" colors={{ main: "#FF5959", dark: "#F04646" }} />
+  <ColorItem title="Black" subtitle="theme.palette.black" colors={colors.black} />
+  <ColorItem title="Gray" subtitle="theme.palette.gray" colors={colors.gray} />
+  <ColorItem title="Green" subtitle="theme.palette.green" colors={colors.green} />
+  <ColorItem title="Red" subtitle="theme.palette.red" colors={colors.red} />
 </ColorPalette>
