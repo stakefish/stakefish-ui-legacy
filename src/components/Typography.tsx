@@ -1,8 +1,16 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { makeStyles, Theme } from "@material-ui/core";
-import MuiTypography, { TypographyProps as MuiTypographyProps } from "@material-ui/core/Typography";
+import { Variant } from "@material-ui/core/styles/createTypography";
+import MuiTypography from "@material-ui/core/Typography";
 
-export interface TypographyProps extends MuiTypographyProps {}
+export interface TypographyProps {
+  variant?: Variant;
+  children: string | number | JSX.Element | JSX.Element[] | ReactNode;
+  noWrap?: boolean;
+  display?: "initial" | "block" | "inline";
+  align?: "inherit" | "left" | "center" | "right" | "justify";
+  color?: "initial" | "inherit" | "primary" | "secondary" | "textPrimary" | "textSecondary" | "error";
+}
 
 const useStyles = makeStyles((theme: Theme) => ({
   h1: {
@@ -79,10 +87,21 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-const Typography: React.FC<TypographyProps> = (props: TypographyProps) => {
-  const classes = useStyles(props);
+const Typography: React.FC<TypographyProps> = ({
+  variant,
+  align,
+  color,
+  noWrap,
+  display,
+  children,
+}: TypographyProps) => {
+  const classes = useStyles();
 
-  return <MuiTypography {...props} classes={classes} />;
+  return (
+    <MuiTypography variant={variant} align={align} color={color} noWrap={noWrap} display={display} classes={classes}>
+      {children}
+    </MuiTypography>
+  );
 };
 
 export default Typography;
