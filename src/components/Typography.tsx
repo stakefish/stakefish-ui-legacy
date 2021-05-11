@@ -4,9 +4,9 @@ import { Variant } from "@material-ui/core/styles/createTypography";
 import MuiTypography from "@material-ui/core/Typography";
 
 export interface TypographyProps {
+  noWrap?: boolean;
   variant?: Variant;
   children: string | number | JSX.Element | JSX.Element[] | ReactNode;
-  noWrap?: boolean;
   display?: "initial" | "block" | "inline";
   align?: "inherit" | "left" | "center" | "right" | "justify";
   color?: "initial" | "inherit" | "primary" | "secondary" | "textPrimary" | "textSecondary" | "error";
