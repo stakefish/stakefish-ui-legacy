@@ -4,11 +4,11 @@ import MuiInput from "@material-ui/core/Input";
 export interface InputProps {
   endAdornment?: ReactNode;
   startAdornment?: ReactNode;
-  size?: "large" | "medium";
+  margin?: "dense" | "none";
 }
 
-const Input: React.FC<InputProps> = ({ size = "medium", startAdornment, endAdornment }: InputProps) => {
-  return <MuiInput startAdornment={startAdornment} endAdornment={endAdornment} />;
+const Input: React.FC<InputProps> = ({ margin, startAdornment, endAdornment }: InputProps) => {
+  return <MuiInput margin={margin} startAdornment={startAdornment} endAdornment={endAdornment} />;
 };
 
 export default Input;
