@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-const Typography: React.FC = (props: TypographyProps) => {
+const Typography: React.FC<TypographyProps> = (props: TypographyProps) => {
   const classes = useStyles(props);
 
   return <MuiTypography {...props} classes={classes} />;
