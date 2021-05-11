@@ -64,6 +64,11 @@ const theme = createMuiTheme({
     lineHeightXl2: lineHeight.xl2,
     lineHeightXl3: lineHeight.xl3,
   },
+  props: {
+    MuiInput: {
+      disableUnderline: true,
+    },
+  },
   overrides: {
     MuiCssBaseline,
     MuiInput,
