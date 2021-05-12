@@ -10,6 +10,7 @@ export interface TypographyProps {
   display?: "initial" | "block" | "inline";
   align?: "inherit" | "left" | "center" | "right" | "justify";
   color?: "initial" | "inherit" | "primary" | "secondary" | "textPrimary" | "textSecondary" | "error";
+  component?: React.ElementType;
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -87,18 +88,43 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
+const variantMapping: { [key: string]: React.ElementType } = {
+  h1: "h1",
+  h2: "h2",
+  h3: "h3",
+  h4: "h4",
+  h5: "h5",
+  h6: "h6",
+  subtitle1: "p",
+  subtitle2: "p",
+  body1: "p",
+  body2: "p",
+  caption: "span",
+  button: "span",
+  overline: "span",
+};
+
 const Typography: React.FC<TypographyProps> = ({
-  variant,
+  variant = "body1",
   align,
   color,
   noWrap,
   display,
+  component,
   children,
 }: TypographyProps) => {
   const classes = useStyles();
 
   return (
-    <MuiTypography variant={variant} align={align} color={color} noWrap={noWrap} display={display} classes={classes}>
+    <MuiTypography
+      variant={variant}
+      align={align}
+      color={color}
+      noWrap={noWrap}
+      display={display}
+      component={component ? component : variantMapping[variant]}
+      classes={classes}
+    >
       {children}
     </MuiTypography>
   );
