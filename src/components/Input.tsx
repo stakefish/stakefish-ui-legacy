@@ -14,6 +14,7 @@ export interface InputProps {
   label?: string;
   error?: boolean;
   helperText?: string;
+  disabled?: boolean;
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -37,6 +38,7 @@ const Input: React.FC<InputProps> = ({
   endAdornment,
   error = false,
   helperText,
+  disabled = false,
 }: InputProps) => {
   const classes = useStyles({ textSize });
 
@@ -55,6 +57,7 @@ const Input: React.FC<InputProps> = ({
         endAdornment={endAdornment}
         placeholder={placeholder}
         inputProps={{ style: { padding: 0 } }}
+        disabled={disabled}
       />
       {error && <MuiFormHelperText text={helperText} />}
     </MuiBox>
