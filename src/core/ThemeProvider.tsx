@@ -14,6 +14,7 @@ import MuiCssBaseline from "../overrides/MuiCssBaseline";
 import MuiTypography from "../overrides/MuiTypography";
 import MuiFormHelperText from "../overrides/MuiFormHelperText";
 import MuiInput from "../overrides/MuiInput";
+import MuiInputLabel from "../overrides/MuiInputLabel";
 
 /**
  * Types
@@ -68,10 +69,15 @@ const theme = createMuiTheme({
     MuiInput: {
       disableUnderline: true,
     },
+    MuiInputLabel: {
+      shrink: false,
+      disableAnimation: true,
+    },
   },
   overrides: {
     MuiCssBaseline,
     MuiInput,
+    MuiInputLabel,
     MuiTypography,
     MuiFormHelperText,
   },
