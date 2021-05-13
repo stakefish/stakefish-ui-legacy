@@ -24,13 +24,14 @@ const FormHelperText: React.FC<FormHelperTextProps> = ({ text, startAdornment })
   return (
     <MuiBox
       display="inline-flex"
+      alignItems="center"
       lineHeight={0}
       px={3}
       py={0.5}
       bgcolor={colors.black.dark}
       className={`${classes.box}`}
     >
-      {startAdornment && startAdornment}
+      {startAdornment && <MuiBox mr={1}>{startAdornment}</MuiBox>}
 
       <Typography variant="subtitle2" component="span">
         {text}

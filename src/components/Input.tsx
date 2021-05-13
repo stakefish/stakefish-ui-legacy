@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import MuiBox from "@material-ui/core/Box";
 import MuiInput from "@material-ui/core/Input";
 import { makeStyles, Theme } from "@material-ui/core/styles";
@@ -65,7 +65,12 @@ const Input: React.FC<InputProps> = ({
         inputProps={{ style: { padding: 0 } }}
         disabled={disabled}
       />
-      {error && <MuiFormHelperText text={helperText} />}
+      {error && (
+        <MuiFormHelperText
+          text={helperText}
+          startAdornment={<Icon iconKey="info-circle" size="xs" color="contrastPrimary" />}
+        />
+      )}
     </MuiBox>
   );
 };
