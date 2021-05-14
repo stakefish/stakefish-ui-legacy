@@ -1,9 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import MuiIconButton, { IconButtonProps as MuiIconButtonProps } from "@material-ui/core/IconButton";
 
 import Icon, { IconProps } from "./Icon";
-// import { IconKeys, IconColors } from "../../definitions/icon";
-// const iconNameKeys = Object.keys(iconList);
 
 export interface IconButtonProps extends Omit<MuiIconButtonProps, "color" | "size">, IconProps {
   ariaLabel?: string;
@@ -11,16 +9,25 @@ export interface IconButtonProps extends Omit<MuiIconButtonProps, "color" | "siz
 
 // TODO: add more event listeners
 const IconButton: React.FC<IconButtonProps> = ({ ariaLabel, onClick, disabled, iconKey, ...props }) => {
+  const [iconColor, setIconColor] = useState(props.color);
+
   const iconProps = {
     className: props.className,
-    color: props.color,
     size: props.size,
     rotate: props.rotate,
   };
 
   return (
-    <MuiIconButton aria-label={ariaLabel} onClick={onClick} disabled={disabled} disableFocusRipple disableRipple>
-      <Icon iconKey={iconKey} {...iconProps} />
+    <MuiIconButton
+      aria-label={ariaLabel}
+      onClick={onClick}
+      onMouseEnter={() => setIconColor("primary")}
+      onMouseLeave={() => setIconColor(props.color)}
+      disabled={disabled}
+      disableFocusRipple
+      disableRipple
+    >
+      <Icon iconKey={iconKey} color={iconColor} {...iconProps} />
     </MuiIconButton>
   );
 };
