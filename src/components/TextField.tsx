@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
 import FormControl, { FormControlProps as MuiFormControlProps } from "@material-ui/core/FormControl";
 
+import Icon from "./Icon";
 import Input, { InputProps } from "./Input";
 import InputLabel from "./InputLabel";
 import FormHelperText from "./FormHelperText";
@@ -10,6 +11,7 @@ export interface TextFieldProps extends MuiFormControlProps, InputProps {
   id: string;
   label?: string;
   helperText?: string;
+  value?: any;
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -22,9 +24,14 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const TextField: React.FC<TextFieldProps> = ({ id, label, helperText, error, ...props }) => {
-  const [value, setValue] = useState("");
+const TextField: React.FC<TextFieldProps> = ({ value, id, label, helperText, error, ...props }) => {
   const classes = useStyles();
+
+  const formControlProps = {
+    onChange: props.onChange,
+    onBlur: props.onBlur,
+    required: props.required,
+  };
 
   const inputProps = {
     textSize: props.textSize,
@@ -33,17 +40,19 @@ const TextField: React.FC<TextFieldProps> = ({ id, label, helperText, error, ...
     startAdornmentProps: props.startAdornmentProps,
   };
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value);
-  };
-
   return (
-    <FormControl error={!!error} classes={classes}>
+    <FormControl error={!!error} classes={classes} {...formControlProps}>
       {label && <InputLabel htmlFor={id}>{label}</InputLabel>}
 
-      <Input {...inputProps} id={id} value={value} onChange={handleChange} aria-describedby={`${id}-text`} />
+      <Input {...inputProps} id={id} value={value} aria-describedby={`${id}-text`} />
 
-      {helperText && error && <FormHelperText id={`${id}-text`} text={helperText} />}
+      {helperText && error && (
+        <FormHelperText
+          id={`${id}-text`}
+          text={helperText}
+          startAdornment={<Icon iconKey="info-circle" color="contrastPrimary" size="xs" />}
+        />
+      )}
     </FormControl>
   );
 };

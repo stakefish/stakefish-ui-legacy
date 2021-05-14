@@ -1,3 +1,4 @@
+import React from "react";
 import { Story, Meta } from "@storybook/react";
 import TextField, { TextFieldProps } from "../components/TextField";
 import { AdornmentStoryProps, adornmentStoryControls, getAdornmentProps } from "./adornmentTypes";
@@ -25,7 +26,6 @@ const argTypes = {
       type: "text",
     },
   },
-  ...adornmentStoryControls,
   children: { table: { disable: true } },
   color: { table: { disable: true } },
   fullWidth: { table: { disable: true } },
@@ -36,7 +36,7 @@ const argTypes = {
   ref: { table: { disable: true } },
 };
 
-const Template: Story<TextFieldStoryProps> = (args: TextFieldStoryProps) => {
+const Template: Story<TextFieldStoryProps> = (args) => {
   const startAdornmentProps = getAdornmentProps(args, "start");
   const endAdornmentProps = getAdornmentProps(args, "end");
 
