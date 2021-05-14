@@ -24,25 +24,25 @@ const FormHelperText: React.FC<FormHelperTextProps> = ({ text, startAdornment })
   const classes = useStyles();
 
   return (
-    <MuiBox
-      display="inline-flex"
-      alignItems="center"
-      alignSelf="start"
-      lineHeight={0}
-      px={3}
-      pt={0.8}
-      pb={1}
-      bgcolor={colors.black.dark}
-      className={`${classes.box}`}
-    >
-      <MuiFormHelperText>
+    <MuiFormHelperText>
+      <MuiBox
+        display="inline-flex"
+        alignItems="center"
+        alignSelf="start"
+        lineHeight={0}
+        px={3}
+        pt={0.8}
+        pb={1}
+        bgcolor={colors.black.dark}
+        className={`${classes.box}`}
+      >
         {startAdornment && <MuiBox mr={1}>{startAdornment}</MuiBox>}
 
         <Typography variant="subtitle2" component="span">
           {text}
         </Typography>
-      </MuiFormHelperText>
-    </MuiBox>
+      </MuiBox>
+    </MuiFormHelperText>
   );
 };
 

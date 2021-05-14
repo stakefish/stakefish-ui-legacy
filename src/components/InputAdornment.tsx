@@ -1,4 +1,5 @@
 import React from "react";
+import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
 import MuiInputAdornment from "@material-ui/core/InputAdornment";
 
 import Icon from "./Icon";
@@ -10,7 +11,20 @@ export interface InputAdornmentProps extends IconButtonProps {
   disabled?: boolean;
 }
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    positionEnd: {
+      marginLeft: 0,
+      "& .MuiIconButton-root": {
+        paddingRight: theme.spacing(2.5),
+      },
+    },
+  })
+);
+
 const InputAdornment: React.FC<InputAdornmentProps> = ({ position = "start", ...props }) => {
+  const classes = useStyles();
+
   const iconProps = {
     iconKey: props.iconKey,
     className: props.className,
@@ -26,7 +40,7 @@ const InputAdornment: React.FC<InputAdornmentProps> = ({ position = "start", ...
   };
 
   return (
-    <MuiInputAdornment position={position}>
+    <MuiInputAdornment position={position} classes={classes}>
       {iconButtonProps.onClick ? <IconButton {...iconButtonProps} /> : <Icon {...iconProps} />}
     </MuiInputAdornment>
   );

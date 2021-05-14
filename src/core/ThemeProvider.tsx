@@ -15,6 +15,7 @@ import MuiTypography from "../overrides/MuiTypography";
 import MuiFormHelperText from "../overrides/MuiFormHelperText";
 import MuiInput from "../overrides/MuiInput";
 import MuiInputLabel from "../overrides/MuiInputLabel";
+import MuiIconButton from "../overrides/MuiIconButton";
 
 /**
  * Types
@@ -80,6 +81,7 @@ const theme = createMuiTheme({
     MuiInputLabel,
     MuiTypography,
     MuiFormHelperText,
+    MuiIconButton,
   },
 });
 

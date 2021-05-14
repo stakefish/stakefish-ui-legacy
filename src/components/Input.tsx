@@ -3,11 +3,12 @@ import MuiInput, { InputProps as MuiInputProps } from "@material-ui/core/Input";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 
 import { IconProps } from "./Icon";
+import { IconButtonProps } from "./IconButton";
 import InputAdornment from "./InputAdornment";
 export interface InputProps {
   textSize?: "big" | "medium";
-  endAdornmentProps?: IconProps;
-  startAdornmentProps?: IconProps;
+  endAdornmentProps?: IconProps | IconButtonProps;
+  startAdornmentProps?: IconProps | IconButtonProps;
 }
 
 export interface CombinedInputProps extends MuiInputProps, InputProps {}
@@ -17,6 +18,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     padding: theme.spacing(1.5, props.narrowEndPadding ? 2.5 : 3, 1.5, 3),
     lineHeight: 1,
     fontSize: props.textSize === "big" ? theme.typography.fontSizeLg : theme.typography.fontSizeM,
+
+    "&.MuiInputBase-adornedEnd": {
+      paddingRight: 0,
+    },
   }),
 }));
 
@@ -32,8 +37,12 @@ const Input: React.FC<CombinedInputProps> = ({
 }: CombinedInputProps) => {
   const classes = useStyles({ textSize, narrowEndPadding: !!endAdornmentProps });
 
-  const StartAdornment = startAdornmentProps && <InputAdornment size="sm" {...startAdornmentProps} edge="start" />;
-  const EndAdornment = endAdornmentProps && <InputAdornment size="sm" {...endAdornmentProps} edge="end" />;
+  const StartAdornment = startAdornmentProps && (
+    <InputAdornment size="sm" {...startAdornmentProps} edge="start" position="start" />
+  );
+  const EndAdornment = endAdornmentProps && (
+    <InputAdornment size="sm" {...endAdornmentProps} edge="end" position="end" />
+  );
 
   return (
     <MuiInput

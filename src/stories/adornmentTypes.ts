@@ -1,5 +1,6 @@
 import { IconKeys, IconColors } from "../../definitions/icon";
-import { iconList, iconColors, IconProps } from "../components/Icon";
+import { InputAdornmentProps } from "../components/InputAdornment";
+import { iconList, iconColors } from "../components/Icon";
 
 const iconNameKeys = [...Object.keys(iconList), ""];
 const iconColorKeys = [...Object.keys(iconColors), ""];
@@ -8,9 +9,11 @@ export interface AdornmentStoryProps {
   startAdornmentKey?: keyof IconKeys;
   startAdornmentColor?: keyof IconColors;
   startAdornmentRotation?: number;
+  startAdornmentOnClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
   endAdornmentKey?: keyof IconKeys;
   endAdornmentColor?: keyof IconColors;
   endAdornmentRotation?: number;
+  endAdornmentOnClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
 export const adornmentStoryControls = {
@@ -78,13 +81,17 @@ export const adornmentStoryControls = {
   },
 };
 
-export const getAdornmentProps = (args: AdornmentStoryProps, type: "start" | "end"): IconProps | undefined => {
+export const getAdornmentProps = (
+  args: AdornmentStoryProps,
+  type: "start" | "end"
+): InputAdornmentProps | undefined => {
   if (type === "start") {
     return args.startAdornmentKey?.length
       ? {
           iconKey: args.startAdornmentKey,
           color: args.startAdornmentColor,
           rotate: args.startAdornmentRotation,
+          onClick: args.startAdornmentOnClick,
         }
       : undefined;
   } else {
@@ -93,6 +100,7 @@ export const getAdornmentProps = (args: AdornmentStoryProps, type: "start" | "en
           iconKey: args.endAdornmentKey,
           color: args.endAdornmentColor,
           rotate: args.endAdornmentRotation,
+          onClick: args.endAdornmentOnClick,
         }
       : undefined;
   }
