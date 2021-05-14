@@ -8,6 +8,9 @@ const MuiInputLabel = {
   formControl: {
     transform: "none",
   },
+  shrink: {
+    transform: "none",
+  },
 };
 
 export default MuiInputLabel;

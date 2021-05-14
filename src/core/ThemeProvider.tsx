@@ -71,7 +71,6 @@ const theme = createMuiTheme({
       disableUnderline: true,
     },
     MuiInputLabel: {
-      shrink: false,
       disableAnimation: true,
     },
   },
