@@ -3,15 +3,15 @@ import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
 import FormControl, { FormControlProps as MuiFormControlProps } from "@material-ui/core/FormControl";
 
 import Icon from "./Icon";
-import Input, { InputProps } from "./Input";
+import Input, { CombinedInputProps as InputProps } from "./Input";
 import InputLabel from "./InputLabel";
 import FormHelperText from "./FormHelperText";
 
-export interface TextFieldProps extends MuiFormControlProps, InputProps {
+export interface TextFieldProps extends MuiFormControlProps {
   id: string;
   label?: string;
   helperText?: string;
-  value?: any;
+  inputProps: Omit<InputProps, "onBlur" | "onChange" | "onFocus" | "onKeyDown" | "onKeyUp">;
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const TextField: React.FC<TextFieldProps> = ({ value, id, label, helperText, error, ...props }) => {
+const TextField: React.FC<TextFieldProps> = ({ id, label, helperText, error, inputProps, ...props }) => {
   const classes = useStyles();
 
   const formControlProps = {
@@ -33,18 +33,11 @@ const TextField: React.FC<TextFieldProps> = ({ value, id, label, helperText, err
     required: props.required,
   };
 
-  const inputProps = {
-    textSize: props.textSize,
-    placeholder: props.placeholder,
-    endAdornmentProps: props.endAdornmentProps,
-    startAdornmentProps: props.startAdornmentProps,
-  };
-
   return (
     <FormControl error={!!error} classes={classes} {...formControlProps}>
       {label && <InputLabel htmlFor={id}>{label}</InputLabel>}
 
-      <Input {...inputProps} id={id} value={value} aria-describedby={`${id}-text`} />
+      <Input {...inputProps} id={id} aria-describedby={`${id}-text`} />
 
       {helperText && error && (
         <FormHelperText

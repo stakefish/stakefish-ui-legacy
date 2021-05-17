@@ -63,7 +63,16 @@ const Template: Story<TextFieldStoryProps> = (args) => {
   const startAdornmentProps = getAdornmentProps(args, "start");
   const endAdornmentProps = getAdornmentProps(args, "end");
 
-  return <TextField {...args} startAdornmentProps={startAdornmentProps} endAdornmentProps={endAdornmentProps} />;
+  return (
+    <TextField
+      {...args}
+      inputProps={{
+        placeholder: args.placeholder,
+        startAdornmentProps,
+        endAdornmentProps,
+      }}
+    />
+  );
 };
 
 /**
@@ -77,29 +86,27 @@ export const ClearText = () => {
     setValue(event.target.value);
   };
 
-  const props = {
-    id: "clear-text",
-    value,
-    placeholder: "Please enter validator address",
-    label: "Find validator",
-    helperText: "Address is not longer than 5 characters",
-  };
-
   return (
     <TextField
-      {...props}
+      id="clear-text"
+      label="Find validator"
+      helperText="Address is not longer than 5 characters"
       onChange={handleChange}
-      startAdornmentProps={{
-        iconKey: "search",
-        color: "secondary",
-      }}
-      endAdornmentProps={{
-        iconKey: "decline",
-        color: "secondary",
-        onClick: () => setValue(""),
-        disabled: !value.length,
-      }}
       error={value.length > 5}
+      inputProps={{
+        value,
+        placeholder: "Please enter validator address",
+        startAdornmentProps: {
+          iconKey: "search",
+          color: "secondary",
+        },
+        endAdornmentProps: {
+          iconKey: "decline",
+          color: "secondary",
+          onClick: () => setValue(""),
+          disabled: !value.length,
+        },
+      }}
     />
   );
 };
