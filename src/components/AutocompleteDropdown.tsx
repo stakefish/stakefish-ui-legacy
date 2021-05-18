@@ -3,8 +3,7 @@ import TextField from "./TextField";
 import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
 import MuiAutocomplete, { AutocompleteProps as MuiAutocompleteProps } from "@material-ui/lab/Autocomplete";
 
-export interface AutocompleteDropdownProps
-  extends Omit<MuiAutocompleteProps<string, false, false, false>, "renderInput"> {
+export interface AutocompleteDropdownProps extends Omit<MuiAutocompleteProps<any, false, false, false>, "renderInput"> {
   placeholder?: string;
 }
 
@@ -14,6 +13,12 @@ const useStyles = makeStyles((theme: Theme) =>
       "& .MuiFormControl-root": {
         display: "flex",
       },
+    },
+    listbox: {
+      padding: 0,
+    },
+    option: {
+      padding: theme.spacing(2, 3),
     },
   })
 );
