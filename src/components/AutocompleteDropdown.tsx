@@ -57,7 +57,6 @@ const AutocompleteDropdown: React.FC<AutocompleteDropdownProps> = ({
           }}
         />
       )}
-      open={isOpen}
       onOpen={(event) => {
         if (props.onOpen) props.onOpen(event);
         setIsOpen(true);
