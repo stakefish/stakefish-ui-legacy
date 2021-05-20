@@ -5,7 +5,7 @@ import { IconKeys, IconSizes, IconColors } from "../../definitions/icon";
 
 import * as I from "../icons";
 
-const svg: IconKeys = {
+export const iconList: IconKeys = {
   telegram: <I.Telegram />,
   twitter: <I.Twitter />,
   youtube: <I.Youtube />,
@@ -65,7 +65,7 @@ const svg: IconKeys = {
   beaconchain: <I.Beaconchain />,
 };
 
-const sizes: IconSizes = {
+export const iconSizes: IconSizes = {
   xxs: 12,
   xs: 20,
   sm: 22,
@@ -73,7 +73,7 @@ const sizes: IconSizes = {
   lg: 60,
 };
 
-const colors: IconColors = {
+export const iconColors: IconColors = {
   primary: themeColors.black.dark,
   secondary: themeColors.gray.dark,
   contrastPrimary: themeColors.gray.bright,
@@ -94,7 +94,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: ({ size, color, rotate }: { size?: keyof IconSizes; color?: keyof IconColors; rotate?: number }) => ({
     display: "inline-block",
     verticalAlign: "middle",
-    height: sizes[size || "md"],
+    height: iconSizes[size || "md"],
     textAlign: "center",
     color: "inherit",
     fontFamily: "inherit !important",
@@ -112,7 +112,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
 
     "& path": {
-      fill: colors[color || "currentColor"],
+      fill: iconColors[color || "currentColor"],
       transition: theme.transitions.create(["fill"]),
     },
   }),
@@ -121,7 +121,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 const Icon: React.FC<IconProps> = ({ iconKey, className, size, color, rotate }) => {
   const classes = useStyles({ size, color, rotate });
 
-  return <i className={`icon icon--${iconKey} ${className || ""} ${classes.root}`}>{svg[iconKey]}</i>;
+  return <i className={`icon icon--${iconKey} ${className || ""} ${classes.root}`}>{iconList[iconKey]}</i>;
 };
 
 export default Icon;

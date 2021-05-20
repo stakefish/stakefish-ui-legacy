@@ -12,8 +12,10 @@ import fontWeight from "../theme/fontWeight";
 
 import MuiCssBaseline from "../overrides/MuiCssBaseline";
 import MuiTypography from "../overrides/MuiTypography";
-import MuiFormHelperText from "../overrides/MuiFormHelperText";
+import MuiIconButton from "../overrides/MuiIconButton";
 import MuiInput from "../overrides/MuiInput";
+import MuiInputLabel from "../overrides/MuiInputLabel";
+import MuiFormHelperText from "../overrides/MuiFormHelperText";
 
 /**
  * Types
@@ -68,12 +70,18 @@ const theme = createMuiTheme({
     MuiInput: {
       disableUnderline: true,
     },
+    MuiInputLabel: {
+      shrink: true, // keep the value `true` to keep `placeholder` shown
+      disableAnimation: true,
+    },
   },
   overrides: {
     MuiCssBaseline,
     MuiInput,
+    MuiInputLabel,
     MuiTypography,
     MuiFormHelperText,
+    MuiIconButton,
   },
 });
 

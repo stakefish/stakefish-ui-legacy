@@ -1,17 +1,23 @@
 import { Story, Meta } from "@storybook/react";
 
-import { Input, InputProps } from "../";
+import Input, { CombinedInputProps } from "../components/Input";
 
-const argTypes = {};
+import { inputArgTypes } from "../utils/formControlStories";
+import { AdornmentStoryProps, getAdornmentProps } from "../utils/adornmentStories";
 
-const Template: Story<InputProps> = (args: InputProps) => {
-  return <Input {...args} />;
+interface InputStoryProps extends CombinedInputProps, AdornmentStoryProps {}
+
+const Template: Story<InputStoryProps> = (args: InputStoryProps) => {
+  const startAdornmentProps = getAdornmentProps(args, "start");
+  const endAdornmentProps = getAdornmentProps(args, "end");
+
+  return <Input {...args} startAdornmentProps={startAdornmentProps} endAdornmentProps={endAdornmentProps} />;
 };
 
 export const Default = Template.bind({});
 
 export default {
-  title: "Example/Input",
+  title: "Form Controls/Input",
   component: Input,
-  argTypes,
+  argTypes: inputArgTypes,
 } as Meta;
