@@ -19,6 +19,10 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     option: {
       padding: theme.spacing(2, 3),
+
+      '&[data-focus="true"], &[aria-selected="true"]': {
+        backgroundColor: `${theme.palette.gray.light} !important`,
+      },
     },
   })
 );

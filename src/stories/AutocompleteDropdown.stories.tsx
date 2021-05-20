@@ -36,6 +36,6 @@ export const Default = () => {
 };
 
 export default {
-  title: "Form Controls/Autocomplete",
+  title: "Form Controls/AutocompleteDropdown",
   component: AutocompleteDropdown,
 } as Meta;
