@@ -5,19 +5,20 @@ import { buttonArgTypes } from "../utils/buttonStories";
 
 const argTypes = {
   ...buttonArgTypes,
+  color: { table: { disable: true } },
   variant: { table: { disable: true } },
 };
 
 interface ButtonStoryProps extends CombinedButtonProps {}
 
 const Template: Story<ButtonStoryProps> = (args: ButtonStoryProps) => {
-  return <Button variant="contained" {...args} />;
+  return <Button variant="outlined" size="small" {...args} />;
 };
 
 export const Default = Template.bind({});
 
 export default {
-  title: "Buttons/Regular",
+  title: "Buttons/Outlined",
   component: Button,
   argTypes,
 } as Meta;

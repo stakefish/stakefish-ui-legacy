@@ -11,13 +11,13 @@ const argTypes = {
 interface ButtonStoryProps extends CombinedButtonProps {}
 
 const Template: Story<ButtonStoryProps> = (args: ButtonStoryProps) => {
-  return <Button variant="contained" {...args} />;
+  return <Button variant="text" {...args} />;
 };
 
 export const Default = Template.bind({});
 
 export default {
-  title: "Buttons/Regular",
+  title: "Buttons/Link",
   component: Button,
   argTypes,
 } as Meta;

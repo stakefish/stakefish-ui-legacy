@@ -1,9 +1,11 @@
 import colors from "../theme/colors";
 import fontWeight from "../theme/fontWeight";
 
-const outlinedStyles = {borderColor: colors.gray.dark,
+const outlinedStyles = {
+  borderColor: colors.gray.dark,
   color: colors.black.bright,
   backgroundColor: "transparent",
+  fontWeight: fontWeight.normal,
 
   '&:active, &:hover': {
     borderColor: colors.black.bright,
@@ -65,10 +67,10 @@ const MuiButton = {
     },
   },
   textSecondary: {
-    color: colors.green.bright,
+    color: colors.green.main,
 
     '&:active, &:hover': {
-      color: colors.green.light,
+      color: colors.green.dark,
     },
   },
 };
