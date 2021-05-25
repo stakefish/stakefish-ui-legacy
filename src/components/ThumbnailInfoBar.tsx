@@ -13,7 +13,7 @@ export interface ThumbnailInfoBarProps {
   thumbnailAnchorLink?: string;
   title: string;
   isTitleCopyable?: boolean;
-  subtitle: string;
+  subtitle?: string;
   isSubtitleCopyable?: boolean;
 }
 
@@ -84,18 +84,22 @@ const ThumbnailInfoBar: React.FC<ThumbnailInfoBarProps> = ({
         thumbnailAnchorLink
       )}
       <Box>
-        <Box mb={0.75} {...textBoxProps}>
-          <Typography variant="caption" component="p">
-            {title}
-          </Typography>
-          {isTitleCopyable && <CopyIconButton text={title} />}
-        </Box>
-        <Box {...textBoxProps}>
-          <Typography variant="overline" component="span" color="textSecondary">
-            {subtitle}
-          </Typography>
-          {isSubtitleCopyable && <CopyIconButton text={subtitle} />}
-        </Box>
+        {title && (
+          <Box {...textBoxProps}>
+            <Typography variant="caption" component="p">
+              {title}
+            </Typography>
+            {isTitleCopyable && <CopyIconButton text={title} />}
+          </Box>
+        )}
+        {subtitle && (
+          <Box pt={0.75} {...textBoxProps}>
+            <Typography variant="overline" component="span" color="textSecondary">
+              {subtitle}
+            </Typography>
+            {isSubtitleCopyable && <CopyIconButton text={subtitle} />}
+          </Box>
+        )}
       </Box>
     </Box>
   );
