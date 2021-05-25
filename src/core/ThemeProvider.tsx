@@ -19,6 +19,7 @@ import MuiFormHelperText from "../overrides/MuiFormHelperText";
 import MuiButton from "../overrides/MuiButton";
 import MuiTableCell from "../overrides/MuiTableCell";
 import MuiTableRow from "../overrides/MuiTableRow";
+import MuiTableSortLabel from "../overrides/MuiTableSortLabel";
 
 /**
  * Types
@@ -88,6 +89,7 @@ const theme = createMuiTheme({
     MuiButton,
     MuiTableCell,
     MuiTableRow,
+    MuiTableSortLabel,
   },
 });
 

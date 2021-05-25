@@ -1,12 +1,12 @@
 import React from "react";
-import Table from "@material-ui/core/Table";
-import TableRow from "@material-ui/core/TableRow";
-import TableHead from "@material-ui/core/TableHead";
-import TableBody from "@material-ui/core/TableBody";
-import TableSortLabel from "@material-ui/core/TableSortLabel";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableCell, { TableCellProps } from "@material-ui/core/TableCell";
+import MuiTable from "@material-ui/core/Table";
+import MuiTableRow from "@material-ui/core/TableRow";
+import MuiTableBody from "@material-ui/core/TableBody";
+import MuiTableContainer from "@material-ui/core/TableContainer";
+import MuiTableCell, { TableCellProps as MuiTableCellProps } from "@material-ui/core/TableCell";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+
+import TableHeadSort, { HeadSortCell } from "./TableHeadSort";
 
 /**
  *
@@ -55,10 +55,10 @@ function formatCellDataRowsIntoArray(data: CellData) {
  * Types
  *
  */
-type Order = "asc" | "desc";
-type CellDataKeys = keyof CellData;
+export type Order = "asc" | "desc";
+export type CellDataKeys = keyof CellData;
 
-interface CellData {
+export interface CellData {
   /**
    * The id of the cell to be synced with HeadCell at the same column
    */
@@ -75,38 +75,13 @@ interface CellData {
      * Additional props to decorate tableCell
      */
     props?: {
-      [key in keyof TableCellProps]: any;
+      [key in keyof MuiTableCellProps]: any;
     };
   };
 }
 
-interface HeadCell {
-  /**
-   * The id that's identical with the cellKey of all CellData in the same column
-   */
-  id: CellDataKeys;
-  /**
-   * The actual content to be rendered
-   */
-  label: string;
-  /**
-   * Additional props to decorate tableCell
-   */
-  props?: {
-    [key in keyof TableCellProps]: any;
-  };
-}
-
-interface TableHeadProps {
-  headCells: HeadCell[];
-  classes: ReturnType<typeof useStyles>;
-  order: Order;
-  orderBy: string;
-  onRequestSort: (event: React.MouseEvent<unknown>, property: CellDataKeys) => void;
-}
-
 export interface TableBodyProps {
-  headCells: HeadCell[];
+  headCells: HeadSortCell[];
   bodyCellsRows: CellData[];
 }
 
@@ -123,60 +98,15 @@ const useStyles = makeStyles((theme: Theme) =>
     table: {
       minWidth: 750,
     },
-    visuallyHidden: {
-      border: 0,
-      clip: "rect(0 0 0 0)",
-      height: 1,
-      margin: -1,
-      overflow: "hidden",
-      padding: 0,
-      position: "absolute",
-      top: 20,
-      width: 1,
-    },
   })
 );
-
-/**
- *
- * Component - Head
- *
- */
-function SortingTableHead({ headCells, classes, order, orderBy, onRequestSort }: TableHeadProps) {
-  const createSortHandler = (property: CellDataKeys) => (event: React.MouseEvent<unknown>) => {
-    onRequestSort(event, property);
-  };
-
-  return (
-    <TableHead>
-      <TableRow>
-        {headCells.map((headCell) => (
-          <TableCell key={headCell.id} sortDirection={orderBy === headCell.id ? order : false} {...headCell.props}>
-            <TableSortLabel
-              active={orderBy === headCell.id}
-              direction={orderBy === headCell.id ? order : "asc"}
-              onClick={createSortHandler(headCell.id)}
-            >
-              {headCell.label}
-              {orderBy === headCell.id ? (
-                <span className={classes.visuallyHidden}>
-                  {order === "desc" ? "sorted descending" : "sorted ascending"}
-                </span>
-              ) : null}
-            </TableSortLabel>
-          </TableCell>
-        ))}
-      </TableRow>
-    </TableHead>
-  );
-}
 
 /**
  *
  * Component - Table
  *
  */
-function SortingTable({ headCells, bodyCellsRows }: TableBodyProps) {
+const TableContainerSort = ({ headCells, bodyCellsRows }: TableBodyProps) => {
   const classes = useStyles();
 
   const [order, setOrder] = React.useState<Order>("asc");
@@ -190,29 +120,28 @@ function SortingTable({ headCells, bodyCellsRows }: TableBodyProps) {
   };
 
   return (
-    <TableContainer>
-      <Table className={classes.table} aria-labelledby="tableTitle" aria-label="enhanced table">
-        <SortingTableHead
+    <MuiTableContainer>
+      <MuiTable className={classes.table} aria-labelledby="tableTitle" aria-label="enhanced table">
+        <TableHeadSort
           headCells={headCells}
-          classes={classes}
           order={order}
           orderBy={orderBy.toString()}
           onRequestSort={handleRequestSort}
         />
-        <TableBody>
+        <MuiTableBody>
           {stableSort(bodyCellsRows, getComparator(order, orderBy)).map((rowCells, index) => (
-            <TableRow tabIndex={-1} key={index}>
+            <MuiTableRow tabIndex={-1} key={index}>
               {formatCellDataRowsIntoArray(rowCells).map((cell, cellIndex) => (
-                <TableCell key={cellIndex} {...cell.props}>
+                <MuiTableCell key={cellIndex} {...cell.props}>
                   {cell.content}
-                </TableCell>
+                </MuiTableCell>
               ))}
-            </TableRow>
+            </MuiTableRow>
           ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+        </MuiTableBody>
+      </MuiTable>
+    </MuiTableContainer>
   );
-}
+};
 
-export default SortingTable;
+export default TableContainerSort;
