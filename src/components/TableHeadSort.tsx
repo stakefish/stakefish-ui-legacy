@@ -4,9 +4,9 @@ import MuiTableHead, { TableHeadProps as MuiTableHeadProps } from "@material-ui/
 import MuiTableCell, { TableCellProps as MuiTableCellProps } from "@material-ui/core/TableCell";
 
 import TableSortLabel from "./TableSortLabel";
-import { Order, CellDataKeys } from "./TableContainerSort";
+import { Order, CellDataKeys } from "./TableContainer";
 
-export interface HeadSortCell {
+export interface HeadCell {
   /**
    * The id that's identical with the cellKey of all CellData in the same column
    */
@@ -16,15 +16,17 @@ export interface HeadSortCell {
    */
   label: string;
   /**
-   * Enable sorting ability
-   */
-  sortable?: boolean;
-  /**
    * Additional props to decorate tableCell
    */
   props?: {
     [key in keyof MuiTableCellProps]: any;
   };
+}
+export interface HeadSortCell extends HeadCell {
+  /**
+   * Enable sorting ability
+   */
+  sortable?: boolean;
 }
 
 export interface TableHeadSortProps extends MuiTableHeadProps {
@@ -34,11 +36,6 @@ export interface TableHeadSortProps extends MuiTableHeadProps {
   onRequestSort: (event: React.MouseEvent<unknown>, property: CellDataKeys) => void;
 }
 
-/**
- *
- * Component - Head
- *
- */
 const TableHeadSort = ({ headCells, order, orderBy, onRequestSort }: TableHeadSortProps) => {
   const createSortHandler = (property: CellDataKeys) => (event: React.MouseEvent<unknown>) => {
     onRequestSort(event, property);

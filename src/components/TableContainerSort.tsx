@@ -2,38 +2,37 @@ import React from "react";
 import MuiTable from "@material-ui/core/Table";
 import MuiTableRow from "@material-ui/core/TableRow";
 import MuiTableBody from "@material-ui/core/TableBody";
+import MuiTableCell from "@material-ui/core/TableCell";
 import MuiTableContainer from "@material-ui/core/TableContainer";
-import MuiTableCell, { TableCellProps as MuiTableCellProps } from "@material-ui/core/TableCell";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
 import TableHeadSort, { HeadSortCell } from "./TableHeadSort";
+import { formatCellDataRowsIntoArray, Order, CellDataKeys, CellDataContent } from "./TableContainer";
 
 /**
- *
- * Utilities
- *
+ * Sorting Utilities
  */
-function getCellDataKey(data: CellData) {
+function getCellDataKey(data: CellDataSort) {
   return Object.keys(data)[0];
 }
-function getCellComparatorKey(data: CellData, orderBy: CellDataKeys) {
+function getCellComparatorKey(data: CellDataSort, orderBy: CellDataKeys) {
   return data?.[orderBy]?.["key"] ? data[orderBy].key : null;
 }
 
-function descendingComparator(a: CellData, b: CellData, orderBy: CellDataKeys) {
+function descendingComparator(a: CellDataSort, b: CellDataSort, orderBy: CellDataKeys) {
   const aComparatorKey = getCellComparatorKey(a, orderBy);
   const bComparatorKey = getCellComparatorKey(b, orderBy);
 
   if (!aComparatorKey || !bComparatorKey || aComparatorKey === bComparatorKey) return 0;
   return bComparatorKey < aComparatorKey ? -1 : 1;
 }
-function getComparator(order: Order, orderBy: CellDataKeys): (a: CellData, b: CellData) => number {
+function getComparator(order: Order, orderBy: CellDataKeys): (a: CellDataSort, b: CellDataSort) => number {
   return order === "desc"
     ? (a, b) => descendingComparator(a, b, orderBy)
     : (a, b) => -descendingComparator(a, b, orderBy);
 }
-function stableSort(array: CellData[], comparator: (x: CellData, y: CellData) => number) {
-  const stabilizedThis = array.map((el, index) => [el, index] as [CellData, number]);
+function stableSort(array: CellDataSort[], comparator: (x: CellDataSort, y: CellDataSort) => number) {
+  const stabilizedThis = array.map((el, index) => [el, index] as [CellDataSort, number]);
 
   stabilizedThis.sort((a, b) => {
     const order = comparator(a[0], b[0]);
@@ -42,47 +41,31 @@ function stableSort(array: CellData[], comparator: (x: CellData, y: CellData) =>
 
   return stabilizedThis.map((el) => el[0]);
 }
-function formatCellDataRowsIntoArray(data: CellData) {
-  const array = [];
-  for (const property in data) {
-    array.push(data[property]);
-  }
-  return array;
+
+/**
+ * Utilities
+ */
+export function createCellSortData(dataSets: CellDataContentSort[], cellDataKeys: (keyof CellDataSort)[]) {
+  const cellData: CellDataSort = {};
+  cellDataKeys.forEach((key, index) => (cellData[key] = dataSets[index]));
+  return cellData;
 }
 
 /**
- *
  * Types
- *
  */
-export type Order = "asc" | "desc";
-export type CellDataKeys = keyof CellData;
-
-export interface CellData {
+interface CellDataContentSort extends CellDataContent {
   /**
-   * The id of the cell to be synced with HeadCell at the same column
+   * The data as sorting reference
    */
-  [cellKey: string]: {
-    /**
-     * The data as sorting reference
-     */
-    key: string;
-    /**
-     * The actual content to be rendered
-     */
-    content: string | number | JSX.Element | JSX.Element[] | React.ReactNode;
-    /**
-     * Additional props to decorate tableCell
-     */
-    props?: {
-      [key in keyof MuiTableCellProps]: any;
-    };
-  };
+  key: string;
 }
-
-export interface TableBodyProps {
+export interface CellDataSort {
+  [cellKey: string]: CellDataContentSort;
+}
+export interface TableContainerSortProps {
   headCells: HeadSortCell[];
-  bodyCellsRows: CellData[];
+  bodyCellsRows: CellDataSort[];
 }
 
 /**
@@ -101,12 +84,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-/**
- *
- * Component - Table
- *
- */
-const TableContainerSort = ({ headCells, bodyCellsRows }: TableBodyProps) => {
+const TableContainerSort = ({ headCells, bodyCellsRows }: TableContainerSortProps) => {
   const classes = useStyles();
 
   const [order, setOrder] = React.useState<Order>("asc");
