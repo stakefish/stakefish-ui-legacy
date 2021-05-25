@@ -6,17 +6,25 @@ const outlinedStyles = {
   color: colors.black.bright,
   backgroundColor: "transparent",
   fontWeight: fontWeight.normal,
+  boxShadow: "none",
 
   '&:active, &:hover': {
     borderColor: colors.black.bright,
     backgroundColor: "transparent",
-  },}
+  }
+}
 
 const MuiButton = {
+  root: {
+    lineHeight: 1.6,
+    borderRadius: 0,
+    boxShadow: "none",
+  },
   contained: {
     backgroundColor: colors.black.bright,
     color: colors.black.contrastText,
     fontWeight: fontWeight.medium,
+    boxShadow: "none",
 
     '&:active, &:hover': {
       backgroundColor: colors.black.light,
@@ -34,6 +42,7 @@ const MuiButton = {
   containedPrimary: {
     backgroundColor: colors.green.bright,
     color: colors.green.contrastText,
+    boxShadow: "none",
 
     '&:active, &:hover': {
       backgroundColor: colors.green.light,
@@ -42,6 +51,7 @@ const MuiButton = {
   containedSecondary: {
     backgroundColor: colors.green.main,
     color: colors.green.contrastText,
+    boxShadow: "none",
 
     '&:active, &:hover': {
       backgroundColor: colors.green.dark,

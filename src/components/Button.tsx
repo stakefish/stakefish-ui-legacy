@@ -34,9 +34,6 @@ interface ColorMap {
 const useStyles = makeStyles((theme: Theme) => ({
   root: (props: { size?: string; color: string; align?: string; variant?: string }) => ({
     textTransform: "none",
-    lineHeight: 1.6,
-    borderRadius: 0,
-    boxShadow: "none",
     position: "relative",
     backgroundColor: props.variant === "contained" ? color.initial[props.color] : undefined,
     color: props.variant === "text" ? color.initial[props.color] : undefined,
@@ -74,6 +71,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     "&.MuiButton-text": {
       padding: props.size === "small" ? theme.spacing(0.5, 2) : theme.spacing(0, 1),
+      transition: theme.transitions.create(["color"]),
     },
   }),
 }));
