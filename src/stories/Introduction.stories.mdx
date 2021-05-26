@@ -26,7 +26,7 @@ stake.fish lightning design system for React.
 ## Icons
 
 <IconGallery>
-  {[...Object.keys(iconList)].map((iconKey) => (
+  {Object.keys(iconList).map((iconKey) => (
     <IconItem name={iconKey} key={iconKey}>
       <Icon iconKey={iconKey} />
     </IconItem>
