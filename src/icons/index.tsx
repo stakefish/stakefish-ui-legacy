@@ -1,5 +1,11 @@
 export { default as AngleLeft } from "./AngleLeft";
+export { default as AngleRight } from "./AngleRight";
+export { default as AngleUp } from "./AngleUp";
+export { default as AngleDown } from "./AngleDown";
 export { default as ArrowLeft } from "./ArrowLeft";
+export { default as ArrowRight } from "./ArrowRight";
+export { default as ArrowUp } from "./ArrowUp";
+export { default as ArrowDown } from "./ArrowDown";
 export { default as File } from "./File";
 export { default as FileText } from "./FileText";
 export { default as Copy } from "./Copy";

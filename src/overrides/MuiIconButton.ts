@@ -1,6 +1,6 @@
 import colors from "../theme/colors";
 
-const MuiFormHelperText = {
+const MuiFormIconButton = {
   root: {
     "&:hover": {
       backgroundColor: "transparent",
@@ -12,4 +12,4 @@ const MuiFormHelperText = {
   },
 };
 
-export default MuiFormHelperText;
+export default MuiFormIconButton;

@@ -13,6 +13,12 @@ export interface IconKeys {
   github: ReactDOM;
   "angle-left": ReactDOM;
   "arrow-left": ReactDOM;
+  "angle-right": ReactDOM;
+  "arrow-right": ReactDOM;
+  "angle-up": ReactDOM;
+  "arrow-up": ReactDOM;
+  "angle-down": ReactDOM;
+  "arrow-down": ReactDOM;
   "caret-down": ReactDOM;
   "caret-up": ReactDOM;
   clock: ReactDOM;

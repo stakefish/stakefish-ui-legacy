@@ -1,5 +1,3 @@
-import React from "react"
-
 const Beaconchain = () => {
   return (
     <svg viewBox="0 0 113.4 113.2">
@@ -34,7 +32,7 @@ const Beaconchain = () => {
 			c0.1,0.7,0.2,1.4,0.2,2.1c0,1.6-0.6,2.8-2,3.6c-0.4,0.2-0.9,0.3-1.3,0.3C87.6,70.8,86.3,70.8,85,70.8C85,70.8,85,70.8,85,70.8z"
       />
     </svg>
-  )
-}
+  );
+};
 
-export default Beaconchain
+export default Beaconchain;
