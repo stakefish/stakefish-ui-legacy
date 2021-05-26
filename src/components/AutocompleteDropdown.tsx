@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-import TextField from "./TextField";
+import Box from "@material-ui/core/Box";
+import Fade from "@material-ui/core/Fade";
+import Popper from "@material-ui/core/Popper";
 import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
 import MuiAutocomplete, { AutocompleteProps as MuiAutocompleteProps } from "@material-ui/lab/Autocomplete";
+
+import TextField from "./TextField";
 
 export interface AutocompleteDropdownProps extends Omit<MuiAutocompleteProps<any, false, false, false>, "renderInput"> {
   placeholder?: string;
@@ -69,6 +73,21 @@ const AutocompleteDropdown: React.FC<AutocompleteDropdownProps> = ({
         if (props.onClose) props.onClose(event, reason);
         setIsOpen(false);
       }}
+      freeSolo={true}
+      PopperComponent={(props) => (
+        <Popper
+          {...props}
+          transition
+          placement="bottom-start"
+          children={({ TransitionProps }) => (
+            <Fade {...TransitionProps} in={props.open} style={{ transformOrigin: "0 0 0" }} timeout={350}>
+              <Box>
+                <>{props.children}</>
+              </Box>
+            </Fade>
+          )}
+        />
+      )}
     />
   );
 };

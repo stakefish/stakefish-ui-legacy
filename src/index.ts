@@ -5,4 +5,6 @@ export { default as Typography, TypographyProps } from "./components/Typography"
 export { default as Input, InputProps } from "./components/Input";
 export { default as Button, ButtonProps } from "./components/Button";
 export { default as TextField, TextFieldProps } from "./components/TextField";
+
+export { default as ThumbnailInfoBar, ThumbnailInfoBarProps } from "./components/ThumbnailInfoBar";
 export { default as AutocompleteDropdown, AutocompleteDropdownProps } from "./components/AutocompleteDropdown";
