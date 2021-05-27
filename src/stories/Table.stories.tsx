@@ -50,4 +50,23 @@ export const Default = Template.bind({});
 
 export default {
   title: "Table/Basic",
+  component: MuiTableContainer,
+  subcomponents: {
+    MuiTable,
+    MuiTableRow,
+    MuiTableBody,
+    MuiTableCell,
+    MuiTableHead,
+    ThumbnailInfoBar,
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: "Use pieces of table components to compose a table.",
+      },
+      source: {
+        type: "code",
+      },
+    },
+  },
 } as Meta;

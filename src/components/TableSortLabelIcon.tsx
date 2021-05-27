@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "./Icon";
 import MuiBox from "@material-ui/core/Box";
-import { Order } from "./TableContainerSort";
+import { Order } from "./TableContainer";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
 export interface TableSortLabelIconProps {
@@ -12,6 +12,7 @@ export interface TableSortLabelIconProps {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     box: {
+      display: "flex",
       "& .icon:first-child": {
         marginRight: "-1px",
       },

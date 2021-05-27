@@ -16,6 +16,19 @@ export const Default = () => {
 export default {
   title: "Table/TableContainer",
   component: TableContainer,
+  subcomponents: {
+    ThumbnailInfoBar,
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: "Pre-composed table, taking data as props.",
+      },
+      source: {
+        type: "code",
+      },
+    },
+  },
 } as Meta;
 
 /**
@@ -136,20 +149,32 @@ const headCells = [
     props: {
       align: "right",
     },
+    hidden: {
+      smDown: true,
+    },
   },
   {
     id: "delegators",
     label: "Delegators",
     props: { align: "right" },
+    hidden: {
+      smDown: true,
+    },
   },
   {
     id: "fees",
     label: "Fees",
     props: { align: "right" },
+    hidden: {
+      smDown: true,
+    },
   },
   {
     id: "website",
     label: "Website",
     props: { align: "center" },
+    hidden: {
+      smDown: true,
+    },
   },
 ];

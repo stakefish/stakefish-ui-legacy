@@ -9,6 +9,7 @@ export interface TableSortLabelProps extends MuiTableSortLabelProps {}
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
+      flexDirection: "row",
       "& .TableSortLabelIcon": {
         marginLeft: theme.spacing(0.5),
       },

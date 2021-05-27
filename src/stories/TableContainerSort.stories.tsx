@@ -16,6 +16,16 @@ export const Default = () => {
 export default {
   title: "Table/TableContainerSort",
   component: TableContainerSort,
+  parameters: {
+    docs: {
+      description: {
+        component: "Pre-composed table with sorting ability, taking data as props.",
+      },
+      source: {
+        type: "code",
+      },
+    },
+  },
 } as Meta;
 
 /**

@@ -1,6 +1,5 @@
 const MuiTableSortLabel = {
   root: {
-    flexDirection: "row",
     "&.MuiTableSortLabel-active": {
       color: "inherit",
     },

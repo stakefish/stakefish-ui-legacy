@@ -41,6 +41,11 @@ const useStyles = makeStyles((theme: Theme) => ({
       pointerEvent: "initial",
     },
   },
+  subtitleBox: {
+    "& span": {
+      wordBreak: "break-word",
+    },
+  },
 }));
 
 const CopyIconButton = ({ text }: { text: string }) => (
@@ -93,7 +98,7 @@ const ThumbnailInfoBar: React.FC<ThumbnailInfoBarProps> = ({
           </Box>
         )}
         {subtitle && (
-          <Box pt={0.75} {...textBoxProps}>
+          <Box pt={0.75} {...textBoxProps} className={classes.subtitleBox}>
             <Typography variant="overline" component="span" color="textSecondary">
               {subtitle}
             </Typography>

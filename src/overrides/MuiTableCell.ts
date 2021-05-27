@@ -20,9 +20,9 @@ const MuiTableCell = {
   head: {
     ...MuiTypography.overline,
     fontWeight: fontWeight.medium,
-    lineHeight: lineHeight.ml,
-    paddingTop: "12px",
-    paddingBottom: "12px",
+    lineHeight: lineHeight.xs,
+    paddingTop: "20px",
+    paddingBottom: "20px",
 
     color: colors.gray.bright,
     backgroundColor: colors.green.bright,
