@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import MuiInput, { InputProps as MuiInputProps } from "@material-ui/core/Input";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 
@@ -25,38 +25,46 @@ const useStyles = makeStyles((theme: Theme) => ({
   }),
 }));
 
-const Input: React.FC<CombinedInputProps> = ({
-  value,
-  placeholder,
-  textSize = "big",
-  startAdornmentProps = undefined,
-  endAdornmentProps = undefined,
-  disabled = false,
-  onChange,
-  onBlur,
-}: CombinedInputProps) => {
-  const classes = useStyles({ textSize, narrowEndPadding: !!endAdornmentProps });
+const Input: React.FC<CombinedInputProps> = forwardRef(
+  (
+    {
+      value,
+      placeholder,
+      textSize = "big",
+      startAdornmentProps = undefined,
+      endAdornmentProps = undefined,
+      disabled = false,
+      onChange,
+      onBlur,
+      ...props
+    }: CombinedInputProps,
+    ref
+  ) => {
+    const classes = useStyles({ textSize, narrowEndPadding: !!endAdornmentProps });
 
-  const StartAdornment = startAdornmentProps && (
-    <InputAdornment size="sm" {...startAdornmentProps} edge="start" position="start" />
-  );
-  const EndAdornment = endAdornmentProps && (
-    <InputAdornment size="sm" {...endAdornmentProps} edge="end" position="end" />
-  );
+    const StartAdornment = startAdornmentProps && (
+      <InputAdornment size="sm" {...startAdornmentProps} edge="start" position="start" />
+    );
+    const EndAdornment = endAdornmentProps && (
+      <InputAdornment size="sm" {...endAdornmentProps} edge="end" position="end" />
+    );
 
-  return (
-    <MuiInput
-      value={value}
-      classes={classes}
-      startAdornment={StartAdornment}
-      endAdornment={EndAdornment}
-      placeholder={placeholder}
-      inputProps={{ style: { padding: 0 } }}
-      disabled={disabled}
-      onChange={onChange}
-      onBlur={onBlur}
-    />
-  );
-};
+    return (
+      <MuiInput
+        value={value}
+        classes={classes}
+        startAdornment={StartAdornment}
+        endAdornment={EndAdornment}
+        placeholder={placeholder}
+        inputProps={{ style: { padding: 0 } }}
+        disabled={disabled}
+        onChange={onChange}
+        onBlur={onBlur}
+        inputRef={ref}
+        {...props}
+      />
+    );
+  }
+);
 
 export default Input;
