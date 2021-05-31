@@ -18,16 +18,16 @@
   "dependencies": {
     "@material-ui/core": "4.11.4",
     "@material-ui/lab": "*",
-    "@types/react-copy-to-clipboard": "^5.0.0",
+    "@types/react-copy-to-clipboard": "5.0.0",
     "react": "17.0.2",
-    "react-copy-to-clipboard": "^5.0.3",
+    "react-copy-to-clipboard": "5.0.3",
     "react-dom": "17.0.2",
     "react-scripts": "4.0.3"
   },
   "devDependencies": {
     "@babel/cli": "7.14.3",
     "@babel/core": "7.14.3",
-    "@babel/preset-env": "7.14.2",
+    "@babel/preset-env": "7.14.4",
     "@babel/preset-react": "7.13.13",
     "@rollup/plugin-babel": "5.3.0",
     "@rollup/plugin-commonjs": "19.0.0",
@@ -37,20 +37,20 @@
     "@storybook/node-logger": "6.2.9",
     "@storybook/preset-create-react-app": "3.1.7",
     "@storybook/react": "6.2.9",
-    "@types/react": "17.0.6",
+    "@types/react": "17.0.8",
     "@types/react-dom": "17.0.5",
     "eslint": "7.27.0",
     "pre-commit": "1.2.2",
     "pre-push": "0.1.1",
     "prettier": "2.3.0",
-    "rollup": "2.49.0",
+    "rollup": "2.50.5",
     "rollup-plugin-copy": "3.4.0",
     "rollup-plugin-delete": "2.0.0",
     "rollup-plugin-generate-package-json": "3.2.0",
-    "rollup-plugin-multi-input": "1.3.0",
+    "rollup-plugin-multi-input": "1.3.1",
     "rollup-plugin-peer-deps-external": "2.2.4",
     "rollup-plugin-typescript2": "0.30.0",
-    "typescript": "4.2.4"
+    "typescript": "4.3.2"
   },
   "resolutions": {
     "babel-loader": "8.2.2"
