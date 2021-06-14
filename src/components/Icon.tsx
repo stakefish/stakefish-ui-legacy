@@ -80,10 +80,10 @@ export const iconSizes: IconSizes = {
 };
 
 export const iconColors: IconColors = {
-  primary: themeColors.black.dark,
-  secondary: themeColors.gray.dark,
-  contrastPrimary: themeColors.gray.bright,
-  contrastSecondary: themeColors.gray.light,
+  primary: themeColors.text.primary,
+  secondary: themeColors.text.secondary,
+  contrastPrimary: themeColors.text.contrastPrimary,
+  contrastSecondary: themeColors.text.contrastSecondary,
   transparent: "transparent",
   currentColor: "currentColor",
 };

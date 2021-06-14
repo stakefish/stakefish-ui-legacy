@@ -2,17 +2,17 @@ import colors from "../theme/colors";
 import fontWeight from "../theme/fontWeight";
 
 const outlinedStyles = {
-  borderColor: colors.gray.dark,
-  color: colors.black.bright,
+  borderColor: colors.button.outlined,
+  color: colors.text.secondary,
   backgroundColor: "transparent",
   fontWeight: fontWeight.normal,
   boxShadow: "none",
 
-  '&:active, &:hover': {
-    borderColor: colors.black.bright,
+  "&:active, &:hover": {
+    borderColor: colors.button.outlinedActive,
     backgroundColor: "transparent",
-  }
-}
+  },
+};
 
 const MuiButton = {
   root: {
@@ -21,40 +21,40 @@ const MuiButton = {
     boxShadow: "none",
   },
   contained: {
-    backgroundColor: colors.black.bright,
-    color: colors.black.contrastText,
+    backgroundColor: colors.button.gray,
+    color: colors.text.contrastPrimary,
     fontWeight: fontWeight.medium,
     boxShadow: "none",
 
-    '&:active, &:hover': {
-      backgroundColor: colors.black.light,
+    "&:active, &:hover": {
+      backgroundColor: colors.button.grayActive,
     },
 
     "&:disabled": {
-      backgroundColor: colors.gray.main,
-      color: colors.gray.contrastText,
+      backgroundColor: colors.button.disabled,
+      color: colors.text.contrastPrimary,
 
-      '&:active, &:hover': {
-        backgroundColor: colors.gray.main,
+      "&:active, &:hover": {
+        backgroundColor: colors.button.disabled,
       },
     },
   },
   containedPrimary: {
-    backgroundColor: colors.green.bright,
-    color: colors.green.contrastText,
+    backgroundColor: colors.button.primary,
+    color: colors.text.contrastPrimary,
     boxShadow: "none",
 
-    '&:active, &:hover': {
-      backgroundColor: colors.green.light,
+    "&:active, &:hover": {
+      backgroundColor: colors.button.primaryActive,
     },
   },
   containedSecondary: {
-    backgroundColor: colors.green.main,
-    color: colors.green.contrastText,
+    backgroundColor: colors.button.secondary,
+    color: colors.text.contrastPrimary,
     boxShadow: "none",
 
-    '&:active, &:hover': {
-      backgroundColor: colors.green.dark,
+    "&:active, &:hover": {
+      backgroundColor: colors.button.secondaryActive,
     },
   },
   outlined: outlinedStyles,
@@ -62,25 +62,25 @@ const MuiButton = {
   outlinedSecondary: outlinedStyles,
   text: {
     backgroundColor: "transparent !important",
-    color: colors.black.dark,
+    color: colors.button.dark,
     fontWeight: fontWeight.medium,
 
-    '&:active, &:hover': {
-      color: colors.black.main,
+    "&:active, &:hover": {
+      color: colors.button.darkActive,
     },
   },
   textPrimary: {
-    color: colors.green.bright,
+    color: colors.button.primary,
 
-    '&:active, &:hover': {
-      color: colors.green.light,
+    "&:active, &:hover": {
+      color: colors.button.primaryActive,
     },
   },
   textSecondary: {
-    color: colors.green.main,
+    color: colors.button.secondary,
 
-    '&:active, &:hover': {
-      color: colors.green.dark,
+    "&:active, &:hover": {
+      color: colors.button.secondaryActive,
     },
   },
 };

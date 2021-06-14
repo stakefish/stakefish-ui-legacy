@@ -2,7 +2,7 @@ import colors from "../theme/colors";
 
 const MuiInput = {
   root: {
-    backgroundColor: colors.gray.light,
+    backgroundColor: colors.gray[200],
   },
 };
 

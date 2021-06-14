@@ -32,7 +32,7 @@ const FormHelperText: React.FC<FormHelperTextProps> = ({ text, startAdornment })
         px={3}
         pt={0.8}
         pb={1}
-        bgcolor={colors.black.dark}
+        bgcolor={colors.button.dark}
         className={classes.box}
       >
         {startAdornment && <MuiBox mr={1}>{startAdornment}</MuiBox>}

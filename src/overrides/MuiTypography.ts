@@ -79,19 +79,22 @@ const MuiTypography = {
     textTransform: "none" as "none",
   },
   colorPrimary: {
-    color: colors.green.light,
-  },
-  colorTextPrimary: {
-    color: colors.green.contrastText,
+    color: colors.text.primary,
   },
   colorSecondary: {
-    color: colors.black.bright,
+    color: colors.text.secondary,
   },
-  colorTextSecondary: {
-    color: colors.gray.dark,
+  colorContrastPrimary: {
+    color: colors.text.contrastPrimary,
+  },
+  colorContrastSecondary: {
+    color: colors.text.contrastSecondary,
+  },
+  colorHighlight: {
+    color: colors.text.highlight,
   },
   colorError: {
-    color: colors.red.main,
+    color: colors.text.error,
   },
 };
 

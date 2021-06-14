@@ -2,29 +2,61 @@ import { Palette, PaletteOptions } from "@material-ui/core/styles/createPalette"
 
 declare module "@material-ui/core/styles/createPalette" {
   interface Colors {
-    red: {
+    // palette
+    lightGreen: {
+      light: string;
       dark: string;
-      main: string;
     };
     green: {
-      bright: string;
       light: string;
       dark: string;
-      main: string;
     };
-    black: {
-      bright: string;
+    red: {
       light: string;
       dark: string;
-      main: string;
     };
     gray: {
-      bright: string;
-      light: string;
-      dark: string;
-      main: string;
+      100: string;
+      200: string;
+      300: string;
+      400: string;
+      500: string;
+      600: string;
+      700: string;
+      800: string;
     };
-    getContrastText?: (background: string) => string;
+    // tokens
+    primary: {
+      main: Colors.lightGreen.light;
+      dark: Colors.lightGreen.dark;
+    };
+    secondary: {
+      main: Colors.green.light;
+      dark: Colors.green.dark;
+    };
+    error: {
+      main: Colors.red.dark;
+      dark: null;
+    };
+    success: {
+      main: Colors.lightGreen.light;
+      dark: null;
+    };
+    text: {
+      primary: Colors.gray[800];
+      secondary: Colors.gray[500];
+      contrastPrimary: Colors.gray[100];
+      contrastSecondary: Colors.gray[300];
+      highlight: Colors.lightGreen.light;
+      error: Colors.red.dark;
+    };
+    button: {
+      primary: Colors.lightGreen.light;
+      secondary: Colors.green.dark;
+      dark: Colors.gray[800];
+      gray: Colors.gray[500];
+      disabled: Colors.gray[300];
+    };
   }
 
   export interface SimplePaletteColorOptions {

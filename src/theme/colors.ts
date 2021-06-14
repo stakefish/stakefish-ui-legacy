@@ -1,29 +1,64 @@
-const colors = {
-  red: {
-    main: "#FF5959",
-    dark: "#F04646",
-    contrastText: "#fff"
+const colorPalette = {
+  lightGreen: {
+    light: "#82D318",
+    dark: "#6BBD00",
   },
   green: {
-    bright: "#82D318",
-    light: "#6BBD00",
-    main: "#0BA012",
+    light: "#0BA012",
     dark: "#008E07",
-    contrastText: "#fff"
   },
-  black: {
-    bright: "#7D8499",
-    light: "#697087",
-    main: "#313540",
-    dark: "#00030E",
-    contrastText: "#fff"
+  red: {
+    light: "#FF5959",
+    dark: "#FF5959",
   },
   gray: {
-    bright: "#FAFBFC",
-    light: "#F5F5F7",
-    main: "#E1E3E8",
-    dark: "#BBBEC7",
-    contrastText: "#fff"
+    100: "#FAFBFC",
+    200: "#F5F5F7",
+    300: "#E1E3E8",
+    400: "#BBBEC7",
+    500: "#7D8499",
+    600: "#697087",
+    700: "#313540",
+    800: "#00030E",
+  },
+};
+
+const colors = {
+  ...colorPalette,
+  primary: {
+    main: colorPalette.lightGreen.light,
+    dark: colorPalette.lightGreen.dark,
+  },
+  secondary: {
+    main: colorPalette.green.light,
+    dark: colorPalette.green.dark,
+  },
+  error: {
+    main: colorPalette.red.dark,
+  },
+  success: {
+    main: colorPalette.lightGreen.light,
+  },
+  text: {
+    primary: colorPalette.gray[800],
+    secondary: colorPalette.gray[500],
+    contrastPrimary: colorPalette.gray[100],
+    contrastSecondary: colorPalette.gray[300],
+    highlight: colorPalette.lightGreen.light,
+    error: colorPalette.red.dark,
+  },
+  button: {
+    primary: colorPalette.lightGreen.light,
+    primaryActive: colorPalette.lightGreen.dark,
+    secondary: colorPalette.green.light,
+    secondaryActive: colorPalette.green.dark,
+    dark: colorPalette.gray[800],
+    darkActive: colorPalette.gray[700],
+    gray: colorPalette.gray[500],
+    grayActive: colorPalette.gray[600],
+    disabled: colorPalette.gray[300],
+    outlined: colorPalette.gray[400],
+    outlinedActive: colorPalette.gray[500],
   },
 };
 
