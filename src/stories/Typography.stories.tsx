@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react";
 
-import Typography, { TypographyProps } from "../components/Typography";
+import Typography, { TypographyProps, typographyVariants } from "../components/Typography";
 
 const argTypes = {
   children: {
@@ -18,8 +18,8 @@ const argTypes = {
   variant: {
     name: "variant",
     description: "Applies the theme typography styles.",
-    defaultValue: "body1",
-    options: ["h1", "h2", "h3", "h4", "h5", "h6", "subtitle1", "subtitle2", "body1", "body2", "caption", "overline"],
+    defaultValue: "paragraph",
+    options: typographyVariants,
     control: {
       type: "select",
     },
