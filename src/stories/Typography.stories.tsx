@@ -19,9 +19,9 @@ const argTypes = {
     name: "variant",
     description: "Applies the theme typography styles.",
     defaultValue: "body1",
+    options: ["h1", "h2", "h3", "h4", "h5", "h6", "subtitle1", "subtitle2", "body1", "body2", "caption", "overline"],
     control: {
       type: "select",
-      options: ["h1", "h2", "h3", "h4", "h5", "h6", "subtitle1", "subtitle2", "body1", "body2", "caption", "overline"],
     },
     table: {
       type: { summary: "string" },
@@ -32,9 +32,9 @@ const argTypes = {
     name: "color",
     description: "The color of the component. It supports those theme colors that make sense for this component.",
     defaultValue: "initial",
+    options: ["initial", "inherit", "primary", "secondary", "textPrimary", "textSecondary", "error"],
     control: {
       type: "select",
-      options: ["initial", "inherit", "primary", "secondary", "textPrimary", "textSecondary", "error"],
     },
     table: {
       type: { summary: "string" },
@@ -45,9 +45,9 @@ const argTypes = {
     name: "align",
     description: "Set the text-align on the component.",
     defaultValue: "inherit",
+    options: ["inherit", "left", "center", "right", "justify"],
     control: {
       type: "select",
-      options: ["inherit", "left", "center", "right", "justify"],
     },
     table: {
       type: { summary: "string" },
@@ -58,9 +58,9 @@ const argTypes = {
     name: "display",
     description: "Set the display on the component.",
     defaultValue: "initial",
+    options: ["initial", "block", "inline"],
     control: {
       type: "select",
-      options: ["initial", "block", "inline"],
     },
     table: {
       type: { summary: "string" },
