@@ -8,14 +8,24 @@ export const buttonArgTypes = {
     name: "color",
     description: "The color of the component. It supports those theme colors that make sense for this component.",
     defaultValue: "primary",
-    control: {
-      type: "select",
-      options: ["default", "primary", "secondary", "red", "black"],
-    },
+    options: ["default", "primary", "secondary", "red", "black"],
+    control: { type: "select" }
   },
-  size: {},
-  fullWidth: {},
-  href: {},
+  size: {
+    name: "size",
+    defaultValue: "medium",
+    options: ["small", 'medium', 'large'],
+    control: { type: "select" }
+  },
+  fullWidth: {
+    name: 'fullWidth',
+    defaultValue: false,
+    control: { type: "boolean" }
+  },
+  href: {
+    name: "href",
+    control: { type: "text" }
+  },
   children: {
     defaultValue: "Button text",
   },
@@ -23,26 +33,25 @@ export const buttonArgTypes = {
     name: "text-align",
     description: "Button text alignment",
     defaultValue: "center",
-    control: {
-      type: "select",
-      options: ["center", "left", "right"],
-    },
+    options: ["center", "left", "right"],
+    control: { type: "select" }
   },
   endIcon: {
     name: "endIcon",
     description: "The key name of icon component.",
-    control: {
-      type: "select",
-      options: iconNameKeys,
-    },
+    options: iconNameKeys,
+    control: { type: "select" }
   },
   startIcon: {
     name: "startIcon",
     description: "The key name of icon component.",
-    control: {
-      type: "select",
-      options: iconNameKeys,
-    },
+    options: iconNameKeys,
+    control: { type: "select" }
+  },
+  disabled: {
+    name: 'disabled',
+    defaultValue: false,
+    control: { type: "boolean" }
   },
   TouchRippleProps: { table: { disable: true } },
   onFocusVisible: { table: { disable: true } },
@@ -56,8 +65,4 @@ export const buttonArgTypes = {
   disableRipple: { table: { disable: true } },
   ref: { table: { disable: true } },
   tabIndex: { table: { disable: true } },
-  startAdornmentProps: { table: { disable: true } },
-  endAdornmentProps: { table: { disable: true } },
-  startIconProps: { table: { disable: true } },
-  endIconProps: { table: { disable: true } },
 };

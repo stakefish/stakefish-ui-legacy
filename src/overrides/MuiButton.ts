@@ -30,10 +30,10 @@ const MuiButton = {
       backgroundColor: colors.black.light,
     },
 
-    '&.Mui-disabled': {
+    "&:disabled": {
       backgroundColor: colors.gray.main,
       color: colors.gray.contrastText,
-  
+
       '&:active, &:hover': {
         backgroundColor: colors.gray.main,
       },
