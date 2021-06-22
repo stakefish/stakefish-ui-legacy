@@ -14,7 +14,6 @@ export interface FormHelperTextProps extends MuiFormHelperTextProps {
 const useStyles = makeStyles((theme: Theme) => ({
   box: {
     "& span": {
-      color: colors.gray.bright,
       lineHeight: 1,
     },
   },
@@ -24,7 +23,7 @@ const FormHelperText: React.FC<FormHelperTextProps> = ({ text, startAdornment })
   const classes = useStyles();
 
   return (
-    <MuiFormHelperText>
+    <MuiFormHelperText component="div">
       <MuiBox
         display="inline-flex"
         alignItems="center"
@@ -34,7 +33,7 @@ const FormHelperText: React.FC<FormHelperTextProps> = ({ text, startAdornment })
         pt={0.8}
         pb={1}
         bgcolor={colors.black.dark}
-        className={`${classes.box}`}
+        className={classes.box}
       >
         {startAdornment && <MuiBox mr={1}>{startAdornment}</MuiBox>}
 

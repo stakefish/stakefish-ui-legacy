@@ -4,7 +4,7 @@ const MuiFormHelperText = {
   root: {
     lineHeight: 0,
     marginTop: 0,
-    "&.MuiFormHelperText-root.Mui-error": {
+    "&$error": {
       color: colors.gray.bright,
     },
   },

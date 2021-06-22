@@ -10,8 +10,19 @@ interface InputStoryProps extends CombinedInputProps, AdornmentStoryProps {}
 const Template: Story<InputStoryProps> = (args: InputStoryProps) => {
   const startAdornmentProps = getAdornmentProps(args, "start");
   const endAdornmentProps = getAdornmentProps(args, "end");
+  const {
+    startAdornmentKey,
+    startAdornmentColor,
+    startAdornmentRotation,
+    startAdornmentOnClick,
+    endAdornmentKey,
+    endAdornmentColor,
+    endAdornmentRotation,
+    endAdornmentOnClick,
+    ...inputProps
+  } = args;
 
-  return <Input {...args} startAdornmentProps={startAdornmentProps} endAdornmentProps={endAdornmentProps} />;
+  return <Input {...inputProps} startAdornmentProps={startAdornmentProps} endAdornmentProps={endAdornmentProps} />;
 };
 
 export const Default = Template.bind({});

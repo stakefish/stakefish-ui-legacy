@@ -5,9 +5,9 @@ export const inputArgTypes = {
     name: "textSize",
     description: "The font size of the placeholder and input text.",
     defaultValue: "big",
+    options: ["big", "medium"],
     control: {
       type: "select",
-      options: ["big", "medium"],
     },
     table: {
       type: { summary: "string" },
@@ -19,6 +19,13 @@ export const inputArgTypes = {
     defaultValue: "Text placeholder",
     control: {
       type: "text",
+    },
+  },
+  disabled: {
+    name: "disabled",
+    defaultValue: false,
+    control: {
+      type: "boolean",
     },
   },
   ref: { table: { disable: true } },
