@@ -5,7 +5,7 @@ import ThumbnailInfoBar, { ThumbnailInfoBarProps } from "../components/Thumbnail
 const argTypes = {
   thumbnailUrl: {
     name: "thumbnailUrl",
-    defaultValue: "https://stake.fish/static/tz1Ldzz6k1BHdhuKvAtMRX7h5kJSMHESMHLC-685da5dac221e497b4741685d29ced91.png",
+    defaultValue: "https://s3.amazonaws.com/keybase_processed_uploads/a084e1a96ecc3f24bd57dfec517a9205_360_360.jpg",
     control: {
       type: "text",
     },

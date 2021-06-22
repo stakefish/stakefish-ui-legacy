@@ -4,22 +4,22 @@ import AutocompleteDropdown from "../components/AutocompleteDropdown";
 
 const validatorOptions = [
   {
-    thumbnailUrl: "https://stake.fish/static/tz1Ldzz6k1BHdhuKvAtMRX7h5kJSMHESMHLC-685da5dac221e497b4741685d29ced91.png",
-    thumbnailAlt: "Tezos Capital Legacy",
-    title: "Tezos Capital Legacy",
-    subtitle: "tz1TDSmoZXwVevLTEvKCTHWpomG76oC9S2fJ",
+    thumbnailUrl: "https://s3.amazonaws.com/keybase_processed_uploads/a084e1a96ecc3f24bd57dfec517a9205_360_360.jpg",
+    thumbnailAlt: "Bi23 Labs",
+    title: "Bi23 Labs",
+    subtitle: "cosmosvaloper1hctafaqveg7dxad8aedf32aq2j877rrec2f5au",
   },
   {
-    thumbnailUrl: "https://stake.fish/static/tz1MXFrtZoaXckE41bjUCSjAjAap3AFDSr3N-d90309be42def12ab0bedf29e6854522.png",
-    thumbnailAlt: "Tezos Istanbul",
-    title: "Tezos Istanbul",
-    subtitle: "tz1Vm5cfHncKGBo7YvZfHc4mmudY4qpWzvSB",
+    thumbnailUrl:"https://s3.amazonaws.com/keybase_processed_uploads/0896b54e305b3817c20ee844066ae905_360_360.jpg",
+    thumbnailAlt:"cosmosave",
+    title:"cosmosave",
+    subtitle:"cosmosvaloper18fuhq6r933854432m0692m05ddqdvzm2gysypr",
   },
   {
-    thumbnailUrl: "https://stake.fish/static/tz1WCd2jm4uSt4vntk4vSuUWoZQGhLcDuR9q-d3792854fd25d5e82b7134b347a3f934.png",
-    thumbnailAlt: "Airfoil",
-    title: "Airfoil",
-    subtitle: "tz1gk3TDbU7cJuiBRMhwQXVvgDnjsxuWhcEA",
+    thumbnailUrl:"https://s3.amazonaws.com/keybase_processed_uploads/e7aca2c60e1b658db8cc8f175ce9aa05_360_360.jpg",
+    thumbnailAlt:"Swiss Staking",
+    title:"Swiss Staking",
+    subtitle:"cosmosvaloper1y0us8xvsvfvqkk9c6nt5cfyu5au5tww2ztve7q",
   },
 ];
 
