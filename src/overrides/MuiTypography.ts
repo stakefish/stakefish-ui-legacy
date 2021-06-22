@@ -84,15 +84,6 @@ const MuiTypography = {
   colorSecondary: {
     color: colors.text.secondary,
   },
-  colorContrastPrimary: {
-    color: colors.text.contrastPrimary,
-  },
-  colorContrastSecondary: {
-    color: colors.text.contrastSecondary,
-  },
-  colorHighlight: {
-    color: colors.text.highlight,
-  },
   colorError: {
     color: colors.text.error,
   },

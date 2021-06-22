@@ -12,6 +12,7 @@ const colorPalette = {
     dark: "#FF5959",
   },
   gray: {
+    0: "#FFFFFF",
     100: "#FAFBFC",
     200: "#F5F5F7",
     300: "#E1E3E8",
@@ -42,7 +43,7 @@ const colors = {
   text: {
     primary: colorPalette.gray[800],
     secondary: colorPalette.gray[500],
-    contrastPrimary: colorPalette.gray[100],
+    contrastPrimary: colorPalette.gray[0],
     contrastSecondary: colorPalette.gray[300],
     highlight: colorPalette.lightGreen.light,
     error: colorPalette.red.dark,
