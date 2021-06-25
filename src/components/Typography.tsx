@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { mapValues } from "lodash";
+import mapValues from "lodash/mapValues";
 import { makeStyles, Theme } from "@material-ui/core";
 import MuiTypography from "@material-ui/core/Typography";
 
