@@ -1,13 +1,13 @@
 export { default as makeStyles } from "@material-ui/core/styles/createStyles";
 
-export { default as ThemeProvider, ThemeProviderProps } from "./core/ThemeProvider";
-export { default as Typography, TypographyProps } from "./components/Typography";
-export { default as Input, InputProps } from "./components/Input";
-export { default as Button, ButtonProps } from "./components/Button";
-export { default as TextField, TextFieldProps } from "./components/TextField";
+export { default as ThemeProvider } from "./core/ThemeProvider";
+export { default as Typography } from "./components/Typography";
+export { default as Input } from "./components/Input";
+export { default as Button } from "./components/Button";
+export { default as TextField } from "./components/TextField";
 
-export { default as ThumbnailInfoBar, ThumbnailInfoBarProps } from "./components/ThumbnailInfoBar";
-export { default as AutocompleteDropdown, AutocompleteDropdownProps } from "./components/AutocompleteDropdown";
+export { default as ThumbnailInfoBar } from "./components/ThumbnailInfoBar";
+export { default as AutocompleteDropdown } from "./components/AutocompleteDropdown";
 
 export { default as Table } from "@material-ui/core/Table";
 export { default as TableRow } from "@material-ui/core/TableRow";
