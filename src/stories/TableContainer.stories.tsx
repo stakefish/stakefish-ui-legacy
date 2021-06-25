@@ -1,4 +1,4 @@
-import { Story, Meta } from "@storybook/react";
+import { Meta } from "@storybook/react";
 import Icon from "../components/Icon";
 import ThumbnailInfoBar from "../components/ThumbnailInfoBar";
 import TableContainer, { createCellData } from "../components/TableContainer";

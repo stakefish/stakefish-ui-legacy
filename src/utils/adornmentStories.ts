@@ -24,19 +24,15 @@ export const adornmentStoryControls = {
   startAdornmentKey: {
     name: "startAdornmentKey",
     description: "The key name of icon component.",
-    control: {
-      type: "select",
-      options: iconNameKeys,
-    },
+    options: iconNameKeys,
+    control: { type: "select" },
     table: { category: "startAdornment" },
   },
   startAdornmentColor: {
     name: "startAdornmentColor",
     description: "The color icon component.",
-    control: {
-      type: "select",
-      options: iconColorKeys,
-    },
+    options: iconColorKeys,
+    control: { type: "select" },
     table: { category: "startAdornment" },
   },
   startAdornmentRotation: {
@@ -55,19 +51,15 @@ export const adornmentStoryControls = {
   endAdornmentKey: {
     name: "endAdornmentKey",
     description: "The key name of icon component.",
-    control: {
-      type: "select",
-      options: iconNameKeys,
-    },
+    options: iconNameKeys,
+    control: { type: "select" },
     table: { category: "endAdornment" },
   },
   endAdornmentColor: {
     name: "endAdornmentColor",
     description: "The color icon component.",
-    control: {
-      type: "select",
-      options: iconColorKeys,
-    },
+    options: iconColorKeys,
+    control: { type: "select" },
     table: { category: "endAdornment" },
   },
   endAdornmentRotation: {

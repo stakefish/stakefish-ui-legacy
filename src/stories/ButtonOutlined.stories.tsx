@@ -6,13 +6,14 @@ import { buttonArgTypes } from "../utils/buttonStories";
 const argTypes = {
   ...buttonArgTypes,
   color: { table: { disable: true } },
-  variant: { table: { disable: true } },
+  size: { defaultValue: 'small', table: { disable: true } },
+  variant: { defaultValue: 'outlined', table: { disable: true } },
 };
 
 interface ButtonStoryProps extends CombinedButtonProps {}
 
 const Template: Story<ButtonStoryProps> = (args: ButtonStoryProps) => {
-  return <Button variant="outlined" size="small" {...args} />;
+  return <Button {...args} />;
 };
 
 export const Default = Template.bind({});

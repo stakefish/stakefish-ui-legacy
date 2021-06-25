@@ -33,12 +33,12 @@ const useStyles = makeStyles((theme: Theme) => ({
       padding: `0 0 0 ${theme.spacing(0.75)}px`,
 
       opacity: 0,
-      pointerEvent: "none",
+      pointerEvents: "none",
       transition: theme.transitions.create(["opacity"]),
     },
     "&:hover button": {
       opacity: 1,
-      pointerEvent: "initial",
+      pointerEvents: "initial",
     },
   },
   subtitleBox: {
@@ -74,14 +74,14 @@ const ThumbnailInfoBar: React.FC<ThumbnailInfoBarProps> = ({
   isSubtitleCopyable = false,
 }) => {
   const classes = useStyles();
-  const textBoxProps = {
+  const textBoxProps = (isSubtitle=false) => ({
     display: "flex",
     alignItems: "center",
-    className: `${classes.textBox}`,
-  };
+    className: `${classes.textBox} ${isSubtitle ? classes.subtitleBox : null}`,
+  });
 
   return (
-    <Box display="flex" alignItems="center" width="100%" className={`${classes.root}`}>
+    <Box display="flex" alignItems="center" width="100%" className={classes.root}>
       {thumbnailLinkWrapper(
         <Box width={48} display="flex" alignItems="center" mr={2}>
           <img src={thumbnailUrl} alt={thumbnailAlt} width="100%" />
@@ -90,7 +90,7 @@ const ThumbnailInfoBar: React.FC<ThumbnailInfoBarProps> = ({
       )}
       <Box>
         {title && (
-          <Box {...textBoxProps}>
+          <Box {...textBoxProps()}>
             <Typography variant="caption" component="p">
               {title}
             </Typography>
@@ -98,7 +98,7 @@ const ThumbnailInfoBar: React.FC<ThumbnailInfoBarProps> = ({
           </Box>
         )}
         {subtitle && (
-          <Box pt={0.75} {...textBoxProps} className={classes.subtitleBox}>
+          <Box pt={0.75} {...textBoxProps(true)}>
             <Typography variant="overline" component="span" color="textSecondary">
               {subtitle}
             </Typography>
