@@ -26,7 +26,7 @@ const InputLabel: React.FC<InputLabelProps> = ({ children }: InputLabelProps) =>
 
   return (
     <MuiInputLabel classes={classes}>
-      <Typography variant="caption">{children}</Typography>
+      <Typography variant="calloutBold">{children}</Typography>
     </MuiInputLabel>
   );
 };

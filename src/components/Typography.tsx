@@ -21,7 +21,7 @@ export const typographyVariants = [
   "callout",
   "calloutBold",
   "supportingText",
-];
+] as const;
 type TypographyVariant = typeof typographyVariants[number];
 
 export interface TypographyProps {
