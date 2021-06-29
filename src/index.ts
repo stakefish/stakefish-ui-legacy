@@ -18,3 +18,7 @@ export { default as TableHeadSort } from "./components/TableHeadSort";
 export { default as TableSortLabel } from "./components/TableSortLabel";
 export { default as TableContainer } from "./components/TableContainer";
 export { default as TableContainerSort } from "./components/TableContainerSort";
+
+export { default as Grid } from "@material-ui/core/Grid";
+export { default as GridContainer } from "./components/GridContainer";
+export { default as GridItem } from "./components/GridItem";
