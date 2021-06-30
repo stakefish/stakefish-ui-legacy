@@ -1,7 +1,7 @@
 import React from "react";
-import themeColors from "../theme/colors";
 import { makeStyles, Theme } from "@material-ui/core";
-import { IconKeys, IconSizes, IconColors } from "../../definitions/icon";
+import { IconKeys, IconSizes } from "../../definitions/icon";
+import { IconColorTypes } from "@material-ui/core/styles/createPalette";
 
 import * as I from "../icons";
 
@@ -79,25 +79,16 @@ export const iconSizes: IconSizes = {
   lg: 60,
 };
 
-export const iconColors: IconColors = {
-  primary: themeColors.text.primary,
-  secondary: themeColors.text.secondary,
-  contrastPrimary: themeColors.text.contrastPrimary,
-  contrastSecondary: themeColors.text.contrastSecondary,
-  transparent: "transparent",
-  currentColor: "currentColor",
-};
-
 export interface IconProps {
   iconKey: keyof IconKeys;
   className?: string;
-  color?: keyof IconColors;
+  color?: keyof IconColorTypes;
   size?: keyof IconSizes;
   rotate?: number;
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
-  root: ({ size, color, rotate }: { size?: keyof IconSizes; color?: keyof IconColors; rotate?: number }) => ({
+  root: ({ size, color, rotate }: { size?: keyof IconSizes; color?: keyof IconColorTypes; rotate?: number }) => ({
     display: "inline-block",
     verticalAlign: "middle",
     height: iconSizes[size || "md"],
@@ -118,7 +109,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
 
     "& path": {
-      fill: iconColors[color || "currentColor"],
+      fill: theme.palette.icon[color || "currentColor"],
       transition: theme.transitions.create(["fill"]),
     },
   }),

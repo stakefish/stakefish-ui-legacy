@@ -85,7 +85,7 @@ const MuiTypography = {
     color: colors.text.secondary,
   },
   colorError: {
-    color: colors.text.error,
+    color: colors.text.negative,
   },
 };
 

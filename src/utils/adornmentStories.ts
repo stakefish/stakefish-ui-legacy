@@ -1,17 +1,19 @@
-import { IconKeys, IconColors } from "../../definitions/icon";
+import { iconList } from "../components/Icon";
+import { IconKeys } from "../../definitions/icon";
 import { InputAdornmentProps } from "../components/InputAdornment";
-import { iconList, iconColors } from "../components/Icon";
+import { IconColorTypes } from "@material-ui/core/styles/createPalette";
+import themeColors from "../theme/colors";
 
 const iconNameKeys = [...Object.keys(iconList), ""];
-const iconColorKeys = [...Object.keys(iconColors), ""];
+const iconColorKeys = [...Object.keys(themeColors.icon), ""];
 
 export interface AdornmentStoryProps {
   startAdornmentKey?: keyof IconKeys;
-  startAdornmentColor?: keyof IconColors;
+  startAdornmentColor?: keyof IconColorTypes;
   startAdornmentRotation?: number;
   startAdornmentOnClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
   endAdornmentKey?: keyof IconKeys;
-  endAdornmentColor?: keyof IconColors;
+  endAdornmentColor?: keyof IconColorTypes;
   endAdornmentRotation?: number;
   endAdornmentOnClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }

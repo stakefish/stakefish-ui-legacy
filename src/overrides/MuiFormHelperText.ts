@@ -5,7 +5,7 @@ const MuiFormHelperText = {
     lineHeight: 0,
     marginTop: 0,
     "&$error": {
-      color: colors.text.contrastPrimary,
+      color: colors.text.inversePrimary,
     },
   },
 };

@@ -45,7 +45,7 @@ const TextField: React.FC<TextFieldProps> = forwardRef(
           <FormHelperText
             id={`${id}-text`}
             text={helperText}
-            startAdornment={<Icon iconKey="info-circle" color="contrastPrimary" size="xs" />}
+            startAdornment={<Icon iconKey="info-circle" color="inversePrimary" size="xs" />}
           />
         )}
       </FormControl>

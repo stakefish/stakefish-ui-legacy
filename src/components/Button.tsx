@@ -12,11 +12,11 @@ export interface ButtonProps extends MuiButtonProps {
 
 const color: ColorMap = {
   initial: {
-    red: colors.error.main,
+    red: colors.error.light,
     black: colors.text.primary,
   },
   action: {
-    red: colors.error.main,
+    red: colors.error.light,
     black: colors.text.primary,
   },
 };
