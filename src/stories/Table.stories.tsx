@@ -1,10 +1,12 @@
 import { Story, Meta } from "@storybook/react";
+
 import MuiTable from "@material-ui/core/Table";
 import MuiTableRow from "@material-ui/core/TableRow";
 import MuiTableBody from "@material-ui/core/TableBody";
 import MuiTableCell from "@material-ui/core/TableCell";
 import MuiTableHead from "@material-ui/core/TableHead";
 import MuiTableContainer from "@material-ui/core/TableContainer";
+
 import ThumbnailInfoBar from "../components/ThumbnailInfoBar";
 
 const Template: Story = () => {

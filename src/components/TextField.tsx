@@ -3,7 +3,7 @@ import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
 import FormControl, { FormControlProps as MuiFormControlProps } from "@material-ui/core/FormControl";
 
 import Icon from "./Icon";
-import Input, { CombinedInputProps as InputProps } from "./Input";
+import Input, { InputProps } from "./Input";
 import InputLabel from "./InputLabel";
 import FormHelperText from "./FormHelperText";
 

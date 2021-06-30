@@ -56,7 +56,7 @@ const argTypes = {
   },
 };
 
-const Template: Story<ThumbnailInfoBarProps> = (args) => <ThumbnailInfoBar {...args} />;
+const Template: Story<ThumbnailInfoBarProps> = (args: ThumbnailInfoBarProps) => <ThumbnailInfoBar {...args} />;
 
 export const Default = Template.bind({});
 

@@ -1,16 +1,16 @@
 import { Story, Meta } from "@storybook/react";
 
-import Button, { CombinedButtonProps } from "../components/Button";
+import Button, { ButtonProps } from "../components/Button";
 import { buttonArgTypes } from "../utils/buttonStories";
 
 const argTypes = {
   ...buttonArgTypes,
   color: { table: { disable: true } },
-  size: { defaultValue: 'small', table: { disable: true } },
-  variant: { defaultValue: 'outlined', table: { disable: true } },
+  size: { defaultValue: "small", table: { disable: true } },
+  variant: { defaultValue: "outlined", table: { disable: true } },
 };
 
-interface ButtonStoryProps extends CombinedButtonProps {}
+interface ButtonStoryProps extends ButtonProps {}
 
 const Template: Story<ButtonStoryProps> = (args: ButtonStoryProps) => {
   return <Button {...args} />;

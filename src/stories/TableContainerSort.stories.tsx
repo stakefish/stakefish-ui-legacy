@@ -1,4 +1,5 @@
 import { Meta } from "@storybook/react";
+
 import Icon from "../components/Icon";
 import ThumbnailInfoBar from "../components/ThumbnailInfoBar";
 import TableContainerSort, { createCellSortData } from "../components/TableContainerSort";

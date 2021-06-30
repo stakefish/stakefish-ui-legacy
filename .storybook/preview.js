@@ -1,4 +1,4 @@
-import { ThemeProvider } from "../src";
+import ThemeProvider from "../src/core/ThemeProvider";
 
 export const parameters = {
   actions: {

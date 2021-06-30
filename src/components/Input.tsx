@@ -4,14 +4,14 @@ import { makeStyles, Theme } from "@material-ui/core/styles";
 
 import { IconProps } from "./Icon";
 import { IconButtonProps } from "./IconButton";
+
 import InputAdornment from "./InputAdornment";
-export interface InputProps {
+
+export interface InputProps extends MuiInputProps {
   textSize?: "big" | "medium";
   endAdornmentProps?: IconProps | IconButtonProps;
   startAdornmentProps?: IconProps | IconButtonProps;
 }
-
-export interface CombinedInputProps extends MuiInputProps, InputProps {}
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: (props: { textSize: string; narrowEndPadding: boolean }) => ({
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   }),
 }));
 
-const Input: React.FC<CombinedInputProps> = forwardRef(
+const Input: React.FC<InputProps> = forwardRef(
   (
     {
       value,
@@ -37,7 +37,7 @@ const Input: React.FC<CombinedInputProps> = forwardRef(
       onChange,
       onBlur,
       ...props
-    }: CombinedInputProps,
+    }: InputProps,
     ref
   ) => {
     const classes = useStyles({ textSize, narrowEndPadding: !!endAdornmentProps });
