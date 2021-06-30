@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react";
 
-import { Typography, TypographyProps } from "../";
+import Typography, { TypographyProps } from "../components/Typography";
 
 const argTypes = {
   children: {

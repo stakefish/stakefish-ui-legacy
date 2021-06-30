@@ -6,11 +6,9 @@ import Icon from "./Icon";
 import colors from "../theme/colors";
 import { IconKeys } from "../../definitions/icon";
 
-export interface ButtonProps {
+export interface ButtonProps extends MuiButtonProps {
   align?: "center" | "left" | "right";
 }
-
-export interface CombinedButtonProps extends MuiButtonProps, ButtonProps {}
 
 const color: ColorMap = {
   initial: {
@@ -76,7 +74,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   }),
 }));
 
-const Button: React.FC<CombinedButtonProps> = forwardRef(
+const Button: React.FC<ButtonProps> = forwardRef(
   (
     {
       value,
@@ -90,7 +88,7 @@ const Button: React.FC<CombinedButtonProps> = forwardRef(
       endIcon,
       onClick,
       ...props
-    }: CombinedButtonProps,
+    }: ButtonProps,
     ref
   ) => {
     const classes = useStyles({ size, color, align, variant });

@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react";
 
-import Button, { CombinedButtonProps } from "../components/Button";
+import Button, { ButtonProps } from "../components/Button";
 import { buttonArgTypes } from "../utils/buttonStories";
 
 const argTypes = {
@@ -8,9 +8,7 @@ const argTypes = {
   variant: { table: { disable: true } },
 };
 
-interface ButtonStoryProps extends CombinedButtonProps {}
-
-const Template: Story<ButtonStoryProps> = (args: ButtonStoryProps) => {
+const Template: Story<ButtonProps> = (args: ButtonProps) => {
   return <Button variant="contained" {...args} />;
 };
 

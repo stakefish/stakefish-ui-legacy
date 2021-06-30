@@ -1,15 +1,16 @@
 import { Story, Meta } from "@storybook/react";
 
-import Input, { CombinedInputProps } from "../components/Input";
+import Input, { InputProps } from "../components/Input";
 
 import { inputArgTypes } from "../utils/formControlStories";
 import { AdornmentStoryProps, getAdornmentProps } from "../utils/adornmentStories";
 
-interface InputStoryProps extends CombinedInputProps, AdornmentStoryProps {}
+interface InputStoryProps extends AdornmentStoryProps, InputProps {}
 
 const Template: Story<InputStoryProps> = (args: InputStoryProps) => {
   const startAdornmentProps = getAdornmentProps(args, "start");
   const endAdornmentProps = getAdornmentProps(args, "end");
+
   const {
     startAdornmentKey,
     startAdornmentColor,
