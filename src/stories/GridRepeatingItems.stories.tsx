@@ -1,9 +1,8 @@
 import { Story, Meta } from "@storybook/react";
-import { styled } from "@material-ui/core/styles";
 import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
-import MuiPaper from "@material-ui/core/Paper";
+import { Item } from "../utils/gridStories";
 import { GridSize as MuiGridSize } from "@material-ui/core/Grid";
 
 import GridItem from "../components/GridItem";
@@ -25,15 +24,6 @@ interface GridLayoutArgs {
 const Template: Story<GridLayoutArgs> = (args: GridLayoutArgs) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-
-  const Item = styled(MuiPaper)(({ theme }) => ({
-    ...theme.typography.caption,
-    padding: theme.spacing(1),
-    textAlign: "center",
-    color: theme.palette.gray.bright,
-    background: theme.palette.green.light,
-    boxShadow: "none",
-  }));
 
   const mdSize = Number.isInteger(12 / (args.itemCount as number)) ? 12 / (args.itemCount as number) : "auto";
 

@@ -3,7 +3,7 @@ import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import MuiGrid, { GridProps as MuiGridProps } from "@material-ui/core/Grid";
 
-export interface GridContainerProps extends Omit<MuiGridProps, "container" | "item"> {}
+export interface GridContainerProps extends Omit<MuiGridProps, "container"> {}
 
 const GridContainer = ({ children, ...props }: GridContainerProps) => {
   /**
