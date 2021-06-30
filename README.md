@@ -26,3 +26,4 @@ This project is licensed under the Apache 2.0 License.
 
 - [@apple-juice](https://www.github.com/apple-juice)
 - [@balajmarius](https://www.github.com/balajmarius)
+- [@vince19972](https://www.github.com/vince19972)
