@@ -8,10 +8,11 @@ export { default as TableHead, TableHeadProps } from "@material-ui/core/TableHea
 
 export { default as ThemeProvider, ThemeProviderProps } from "./core/ThemeProvider";
 
-export { default as Typography, TypographyProps } from "./components/Typography";
+export { default as Modal, ModalProps } from "./components/Modal";
 export { default as Input, InputProps } from "./components/Input";
 export { default as Button, ButtonProps } from "./components/Button";
 export { default as TextField, TextFieldProps } from "./components/TextField";
+export { default as Typography, TypographyProps } from "./components/Typography";
 export { default as ThumbnailInfoBar, ThumbnailInfoBarProps } from "./components/ThumbnailInfoBar";
 export { default as AutocompleteDropdown, AutocompleteDropdownProps } from "./components/AutocompleteDropdown";
 export { default as TableHeadSort, TableHeadSortProps } from "./components/TableHeadSort";
