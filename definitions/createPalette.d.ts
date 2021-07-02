@@ -2,29 +2,84 @@ import { Palette, PaletteOptions } from "@material-ui/core/styles/createPalette"
 
 declare module "@material-ui/core/styles/createPalette" {
   interface Colors {
-    red: {
+    // palette
+    lightGreen: {
+      light: string;
       dark: string;
-      main: string;
     };
     green: {
-      bright: string;
       light: string;
       dark: string;
-      main: string;
     };
-    black: {
-      bright: string;
+    red: {
       light: string;
       dark: string;
-      main: string;
     };
     gray: {
-      bright: string;
-      light: string;
-      dark: string;
-      main: string;
+      white: string;
+      100: string;
+      200: string;
+      300: string;
+      400: string;
+      500: string;
+      600: string;
+      700: string;
+      800: string;
     };
-    getContrastText?: (background: string) => string;
+    // tokens
+    primary: {
+      light: colorPalette.lightGreen.light;
+      dark: colorPalette.lightGreen.dark;
+    };
+    primaryAlt: {
+      light: colorPalette.green.light;
+      dark: colorPalette.green.dark;
+    };
+    secondary: {
+      light: colorPalette.gray[800];
+      dark: colorPalette.gray[700];
+    };
+    error: {
+      light: colorPalette.red.light;
+      dark: colorPalette.red.dark;
+    };
+    success: {
+      light: colorPalette.lightGreen.light;
+      dark: colorPalette.lightGreen.dark;
+    };
+    text: TextColorTypes;
+    icon: IconColorTypes;
+    button: ButtonColorTypes;
+    links: LinksColorTypes;
+  }
+
+  export interface TextColorTypes extends ReadingColorTypes {}
+  export interface IconColorTypes extends ReadingColorTypes {
+    transparent: string;
+    currentColor: string;
+  }
+  export interface ButtonColorTypes extends InteractiveColorTypes {}
+  export interface LinksColorTypes extends InteractiveColorTypes {}
+
+  export interface ReadingColorTypes {
+    primary: colorPalette.gray[800];
+    secondary: colorPalette.gray[500];
+    inversePrimary: colorPalette.gray.white;
+    inverseSecondary: colorPalette.gray[400];
+    positive: colorPalette.lightGreen.light;
+    negative: colorPalette.red.light;
+  }
+
+  export interface InteractiveColorTypes {
+    primary: colorPalette.lightGreen.light;
+    primaryActive: colorPalette.lightGreen.dark;
+    primaryAlt: colorPalette.green.light;
+    primaryAltActive: colorPalette.green.dark;
+    secondary: colorPalette.gray[800];
+    secondaryActive: colorPalette.gray[700];
+    secondaryAlt: colorPalette.gray[600];
+    secondaryAltActive: colorPalette.gray[500];
+    disabled: colorPalette.gray[400];
   }
 
   export interface SimplePaletteColorOptions {

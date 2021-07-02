@@ -24,8 +24,8 @@ const MuiTableCell = {
     paddingTop: "20px",
     paddingBottom: "20px",
 
-    color: colors.gray.bright,
-    backgroundColor: colors.green.bright,
+    color: colors.text.inversePrimary,
+    backgroundColor: colors.primary.light,
   },
 };
 

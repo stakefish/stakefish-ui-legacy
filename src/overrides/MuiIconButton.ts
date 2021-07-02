@@ -6,7 +6,7 @@ const MuiFormIconButton = {
       backgroundColor: "transparent",
 
       "& .icon path": {
-        fill: colors.black.main,
+        fill: colors.text.primary,
       },
     },
   },

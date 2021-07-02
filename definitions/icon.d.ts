@@ -71,12 +71,3 @@ export interface IconSizes {
   md: number;
   lg: number;
 }
-
-export interface IconColors {
-  primary: string;
-  secondary: string;
-  contrastPrimary: string;
-  contrastSecondary: string;
-  transparent: string;
-  currentColor: string;
-}

@@ -4,7 +4,7 @@ const MuiTableRow = {
   root: {
     "&:nth-child(even)": {
       "& .MuiTableCell-body": {
-        backgroundColor: colors.gray.light,
+        backgroundColor: colors.gray[200],
       },
     },
   },
