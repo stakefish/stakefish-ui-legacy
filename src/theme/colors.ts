@@ -32,6 +32,7 @@ const readingColorSet = {
   inversePrimary: colorPalette.gray.white,
   inverseSecondary: colorPalette.gray[400],
   positive: colorPalette.lightGreen.light,
+  positiveAlt: colorPalette.green.light,
   negative: colorPalette.red.light,
 };
 
@@ -52,27 +53,32 @@ const colors: Colors = {
   primary: {
     light: colorPalette.lightGreen.light,
     dark: colorPalette.lightGreen.dark,
+    main: colorPalette.lightGreen.dark,
   },
   primaryAlt: {
     light: colorPalette.green.light,
     dark: colorPalette.green.dark,
+    main: colorPalette.green.dark,
   },
   secondary: {
     light: colorPalette.gray[800],
     dark: colorPalette.gray[700],
+    main: colorPalette.gray[700],
   },
   error: {
     light: colorPalette.red.light,
     dark: colorPalette.red.dark,
+    main: colorPalette.red.dark,
   },
   success: {
     light: colorPalette.lightGreen.light,
     dark: colorPalette.lightGreen.dark,
+    main: colorPalette.lightGreen.dark,
   },
   text: readingColorSet,
   icon: { ...readingColorSet, transparent: "transparent", currentColor: "currentColor" },
   button: interactiveColorSet,
-  links: interactiveColorSet,
+  link: interactiveColorSet,
 };
 
 export default colors;
