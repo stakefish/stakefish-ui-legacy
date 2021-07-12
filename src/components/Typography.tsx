@@ -2,13 +2,15 @@ import React, { ReactNode } from "react";
 import mapValues from "lodash/mapValues";
 import { makeStyles, Theme } from "@material-ui/core";
 import MuiTypography from "@material-ui/core/Typography";
+import { TextColorTypes } from "@material-ui/core/styles/createPalette";
 
+import colors from "../theme/colors";
 import fontSize from "../theme/fontSize";
 import fontWeight from "../theme/fontWeight";
 import fontFamily from "../theme/fontFamily";
 import lineHeight from "../theme/lineHeight";
 
-export const typographyVariants = [
+export const TypographyVariants = [
   "headline1",
   "headline2",
   "heroParagraph",
@@ -22,7 +24,7 @@ export const typographyVariants = [
   "calloutBold",
   "supportingText",
 ] as const;
-type TypographyVariant = typeof typographyVariants[number];
+type TypographyVariant = typeof TypographyVariants[number];
 
 export interface TypographyProps {
   noWrap?: boolean;
@@ -30,7 +32,7 @@ export interface TypographyProps {
   children: string | number | JSX.Element | JSX.Element[] | ReactNode;
   display?: "initial" | "block" | "inline";
   align?: "inherit" | "left" | "center" | "right" | "justify";
-  color?: "initial" | "inherit" | "primary" | "secondary" | "textPrimary" | "textSecondary" | "error";
+  color?: keyof TextColorTypes;
   component?: React.ElementType;
 }
 
@@ -270,7 +272,12 @@ const customizedVariants = {
 };
 
 const useStyles = makeStyles((theme: Theme) => ({
-  root: ({ variant }: { variant: TypographyVariant }) => customizedVariants[variant].styles(theme),
+  root: ({ variant, color }: { variant: TypographyVariant; color?: keyof TextColorTypes }) => {
+    return {
+      color: colors.text[color ? color : "primary"],
+      ...customizedVariants[variant].styles(theme),
+    };
+  },
   ...overrideStyles(theme),
 }));
 
@@ -302,12 +309,11 @@ const Typography: React.FC<TypographyProps> = ({
   component,
   children,
 }: TypographyProps) => {
-  const classes = useStyles({ variant });
+  const classes = useStyles({ variant, color });
 
   return (
     <MuiTypography
       align={align}
-      color={color}
       noWrap={noWrap}
       display={display}
       component={component ? component : variantMapping[variant]}

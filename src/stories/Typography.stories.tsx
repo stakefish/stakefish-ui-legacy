@@ -1,6 +1,8 @@
 import { Story, Meta } from "@storybook/react";
+import themeColors from "../theme/colors";
+import Typography, { TypographyProps, TypographyVariants } from "../components/Typography";
 
-import Typography, { TypographyProps, typographyVariants } from "../components/Typography";
+const textColorKeys = [...Object.keys(themeColors.text), ""];
 
 const argTypes = {
   children: {
@@ -19,7 +21,7 @@ const argTypes = {
     name: "variant",
     description: "Applies the theme typography styles.",
     defaultValue: "paragraph",
-    options: typographyVariants,
+    options: TypographyVariants,
     control: {
       type: "select",
     },
@@ -31,14 +33,14 @@ const argTypes = {
   color: {
     name: "color",
     description: "The color of the component. It supports those theme colors that make sense for this component.",
-    defaultValue: "initial",
-    options: ["initial", "inherit", "primary", "secondary", "textPrimary", "textSecondary", "error"],
+    defaultValue: themeColors.text.primary,
+    options: textColorKeys,
     control: {
       type: "select",
     },
     table: {
       type: { summary: "string" },
-      defaultValue: { summary: "initial" },
+      defaultValue: { summary: themeColors.text.primary },
     },
   },
   align: {

@@ -99,7 +99,7 @@ const ThumbnailInfoBar: React.FC<ThumbnailInfoBarProps> = ({
         )}
         {subtitle && (
           <Box pt={0.75} {...textBoxProps(true)}>
-            <Typography variant="supportingText" component="span" color="textSecondary">
+            <Typography variant="supportingText" component="span" color="secondary">
               {subtitle}
             </Typography>
             {isSubtitleCopyable && <CopyIconButton text={subtitle} />}
