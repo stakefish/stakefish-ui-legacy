@@ -4,6 +4,7 @@ import { IconKeys, IconSizes } from "../../definitions/icon";
 import { IconColorTypes } from "@material-ui/core/styles/createPalette";
 
 import * as I from "../icons";
+import colors from "../theme/colors";
 
 export const iconList: IconKeys = {
   telegram: <I.Telegram />,
@@ -109,7 +110,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
 
     "& path": {
-      fill: theme.palette.icon[color || "currentColor"],
+      fill: colors.icon[color || "currentColor"],
       transition: theme.transitions.create(["fill"]),
     },
   }),

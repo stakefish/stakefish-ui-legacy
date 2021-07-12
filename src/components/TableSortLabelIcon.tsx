@@ -21,10 +21,10 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     defaultIcon: {
-      color: theme.palette.green.dark,
+      color: theme.palette.icon.positiveAlt,
     },
     activeIcon: {
-      color: theme.palette.gray.bright,
+      color: theme.palette.icon.inversePrimary,
     },
   })
 );

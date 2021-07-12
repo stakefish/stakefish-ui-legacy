@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(2, 3),
 
       '&[data-focus="true"], &[aria-selected="true"]': {
-        backgroundColor: `${theme.palette.gray.light} !important`,
+        backgroundColor: `${theme.palette.gray[200]} !important`,
       },
     },
   })
