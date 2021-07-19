@@ -74,7 +74,7 @@ const ThumbnailInfoBar: React.FC<ThumbnailInfoBarProps> = ({
   isSubtitleCopyable = false,
 }) => {
   const classes = useStyles();
-  const textBoxProps = (isSubtitle=false) => ({
+  const textBoxProps = (isSubtitle = false) => ({
     display: "flex",
     alignItems: "center",
     className: `${classes.textBox} ${isSubtitle ? classes.subtitleBox : null}`,
@@ -91,7 +91,7 @@ const ThumbnailInfoBar: React.FC<ThumbnailInfoBarProps> = ({
       <Box>
         {title && (
           <Box {...textBoxProps()}>
-            <Typography variant="caption" component="p">
+            <Typography variant="calloutBold" component="p">
               {title}
             </Typography>
             {isTitleCopyable && <CopyIconButton text={title} />}
@@ -99,7 +99,7 @@ const ThumbnailInfoBar: React.FC<ThumbnailInfoBarProps> = ({
         )}
         {subtitle && (
           <Box pt={0.75} {...textBoxProps(true)}>
-            <Typography variant="overline" component="span" color="textSecondary">
+            <Typography variant="supportingText" component="span" color="secondary">
               {subtitle}
             </Typography>
             {isSubtitleCopyable && <CopyIconButton text={subtitle} />}

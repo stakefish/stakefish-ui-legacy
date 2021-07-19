@@ -37,7 +37,7 @@ const FormHelperText: React.FC<FormHelperTextProps> = ({ text, startAdornment })
       >
         {startAdornment && <MuiBox mr={1}>{startAdornment}</MuiBox>}
 
-        <Typography variant="subtitle2" component="span">
+        <Typography variant="callout" component="span">
           {text}
         </Typography>
       </MuiBox>
